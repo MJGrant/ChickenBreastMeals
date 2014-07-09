@@ -1,0 +1,31 @@
+{
+	"title": "Basic Baked Chicken Breasts",
+    "id:":0,
+	"description":"Simple yet refined, basic but definitely not boring. Accent with butter, garlic, parsley, or other spices, or eat plain and hot out of the oven.",
+	"preptime": 10,
+    "cooktime": 50,
+	"cooktemp": 450,
+	"ingredients": [
+		"chicken breasts",
+		"butter (optional)",
+		"salt (optional)",
+	],
+	"instructions": [
+		"Pre-heat oven to 450",
+        "Arrange the chicken breasts in a large pan", 
+        "Place pan in the center of the oven", 
+        "Check after 45 minutes",
+        "Chicken breasts are done when they're brown and crispy and their internal temp reaches 160.",
+    ], 
+    "thumbnail": "/images/basicchickenbreast-1.jpg",
+    "images": [
+    	"/images/basicchickenbreast-1.jpg",
+    	"/images/basicchickenbreast-2.jpg",
+    	"/images/basicchickenbreast-3.jpg",
+    ],
+    "tags":[
+    	"simple",
+    	"baked",
+    	"savory",
+    ]
+}

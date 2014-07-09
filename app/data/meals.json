@@ -1,0 +1,51 @@
+[
+    {
+        "title":"Basic Baked Chicken Breasts",
+        "id":"basic-baked-chicken-breasts",
+        "imageUrl":"images/meals/basicchickenbreasts-1.jpg",
+        "cooktime": 55, 
+        "snippet": "Simple yet refined, basic but definitely not boring. Accent with butter, garlic, parsley, or other spices, or eat plain and hot out of the oven."
+    }, 
+    {
+        "title":"Easy Grilled Teriyaki Chicken",
+        "id":"easy-grilled-teriyaki-chicken",
+        "imageUrl":"images/meals/chickenteriyaki-1.jpg",
+        "cooktime": 15, 
+        "snippet": "Chicken breasts marinated in teriyaki sauce, lemon, garlic, and sesame oil, then grilled to a tasty finish. Very easy and great for a hot summer's evening."
+    }, 
+    {
+        "title":"Chicken al Pastor",
+        "id":"chicken-al-pastor",
+        "imageUrl":"images/meals/chickenalpastor-1.jpg",
+        "cooktime": 30, 
+        "snippet": "GOD TIER. You cannot comprehend the yum in this Jim Grant original."
+    }, 
+    {
+        "title":"Pan-Fried Chicken Nuggets",
+        "id":"pan-fried-chicken-nuggets",
+        "imageUrl":"images/meals/chickenbreastnuggets-1.jpg",
+        "cooktime": 10, 
+        "snippet": "Fried to a crisp. Coat with a sweet sauce for maximum deliciousness."
+    },
+    {
+        "title":"Bacon Wrapped Chicken",
+        "id":"bacon-wrapped-chicken",
+        "imageUrl":"images/meals/baconwrappedchicken-1.jpg",
+        "cooktime": 25, 
+        "snippet": "Exactly what it says on the tin."
+    },
+    {
+        "title":"Pizza Smothered Chicken",
+        "id":"pizza-smothered-chicken",
+        "imageUrl":"images/meals/pizzasmotheredchicken-1.jpg",
+        "cooktime": 20, 
+        "snippet": "Like a pizza, but without all that doughy stuff."
+    },
+    {
+        "title":"Better-Than-Takeout Orange Chicken",
+        "id":"better-than-takeout-chicken",
+        "imageUrl":"images/meals/orangechicken-1.jpg",
+        "cooktime": 20, 
+        "snippet": "Sweet, spicy, and, most importantly: crispy. This delicious homemade orange chicken recipe is easy to make and super tasty."
+    }
+]

@@ -1,0 +1,33 @@
+{
+	"title": "Easy Grilled Teriyaki Chicken",
+	"id":1,
+	"description":"Chicken breasts marinated in teriyaki sauce, lemon, garlic, and sesame oil, then grilled to a tasty finish. Very easy and great for a hot summer's evening.",
+	"preptime": 20,
+	"cooktime": 15,
+	"cooktemp": "high",
+	"ingredients": [
+		"4 skinless boneless chicken breasts",
+		"1 cup teriyaki sauce",
+		"1/4 cup lemon juice",
+		"2 teaspoons minced ginger",
+		"2 teaspoons sesame oil",
+		"salt (optional)",
+	],
+	"instructions": [
+		"Place chicken, teriyaki sauce, lemon juice, garlic, and sesame oil in a large resealable plastic bag. Seal bag, and shake to coat. Place in refrigerator for 24 hours, turning every so often.",
+        "Preheat grill for high heat.", 
+        "Lightly oil the grill grate. Remove chicken from bag, discarding any remaining marinade.", 
+        "Check after 45 minutes",
+        "Grill for 6 to 8 minutes each side, or until juices run clear when chicken is pierced with a fork",
+    ], 
+    "thumbnail": "/images/chickenteriyaki-1.jpg",
+    "images": [
+    	"/images/chickenteriyaki-1.jpg",
+    	"/images/chickenteriyaki-2.jpg",
+    ],
+    "tags":[
+    	"simple",
+    	"baked",
+    	"savory",
+    ]
+}
