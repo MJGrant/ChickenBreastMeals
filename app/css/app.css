@@ -1,10 +1,24 @@
 /* app css stylesheet */
+html { 
+  background-color:#f1f1f1;
+  overflow:hidden;
+}
+
+a {
+  color:gray;
+}
 
 .menu {
   list-style: none;
-  border-bottom: 0.1em solid black;
+  border-bottom: 0.1em solid #eee;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
+  background-color:#d3d3d3;
+}
+
+.menu a { 
+  font-size:1em;
+  color:#555;
 }
 
 .menu:before {
@@ -29,16 +43,15 @@
   padding: 0;
 }
 
-.mealsList {
-  height:30%;
-  max-height:800px;
+.mealsLeft {
+  background-color:white;
+  height:500px;
+  overflow:hidden;
   width:40%;
   max-width:40%;
-  border:1px red solid;
-  overflow-y:scroll;
 }
 
-.mealsList h1 {
+.mealsLeft h1 {
   margin:0 auto;
   font-style:italic;
 }
@@ -47,9 +60,19 @@
   list-style: none;
 }
 
+.mealsScrollList {
+  overflow-y:scroll;
+  width:100%;
+  height:100%;
+}
+
+.mealsScrollList li {
+    list-style: none;
+}
+
 .mealPreviewButton {
   width:94%;
-  height:88px;
+  height:90px;
   border-bottom:1px solid gray;
   padding:2px;
   font-size:.8em;
@@ -58,15 +81,25 @@
 
 .mealTitle {
   font-size:1.2em;
-  color:gray;
+  color:orange;
+  text-decoration:none;
 }
 
 .thumb {
   float: left;
-  height: 70px;
-  width: 70px;
-  padding:2px;
-  /*test*/
+  height: 80px;
+  width: 80px;
+  margin:5px;
+}
+
+header {
+  background-color:white;
+}
+
+.siteTitle { 
+  color:orange;
+  text-decoration:none;
+  font-size:1.2em;
 }
 
 .cooktime {
@@ -74,6 +107,22 @@
   color:gray;
   float:right;
   display:block;
+}
+
+.mealsTitle, .prepTimeTitle {
+  font-size:.8em;
+  display:block;
+  font-style:italic;
+}
+
+.mealsTitle {
+    padding-left:10px;
+  float:left;
+}
+
+.prepTimeTitle {
+    padding-right:10px;
+  float:right;
 }
 
 .meals li {

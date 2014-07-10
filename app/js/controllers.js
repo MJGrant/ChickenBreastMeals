@@ -8,6 +8,6 @@ cbmApp.controller('MealListCtrl', function($scope, $http) {
 		$scope.meals = data;
 	});
 
-	$scope.name = "Chicken Breast Meals.com"; 
+	$scope.siteName = "Chicken Breast Meals.com"; 
 	$scope.orderProp = 'cooktime';
 });
