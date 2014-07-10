@@ -8,12 +8,44 @@ a {
   color:gray;
 }
 
+.wrapper {
+  display: flex; 
+  justify-content: space-around; 
+}
+
+.scrollListLabels {
+  display: flex; 
+  justify-content: space-around;
+  font-size:.8em;
+  display:block;
+  font-style:italic;
+}
+
+.sortBy {
+  float:left;
+  margin:0 auto;
+  padding-left:10px;
+}
+
+.mealsTitle {
+  padding-left:10px;
+  float:left;
+}
+
+.prepTimeTitle {
+  padding-right:10px;
+  float:right;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid #eee;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
   background-color:#d3d3d3;
+  padding:20px 0;
+}
+
+.menu, ol, ul {
+  padding:0px;
 }
 
 .menu a { 
@@ -99,7 +131,7 @@ header {
 .siteTitle { 
   color:orange;
   text-decoration:none;
-  font-size:1.2em;
+  font-size:1.5em;
 }
 
 .cooktime {
@@ -109,24 +141,27 @@ header {
   display:block;
 }
 
-.mealsTitle, .prepTimeTitle {
-  font-size:.8em;
+.mins {
+  font-size:.6em;
+  clear:both;
   display:block;
-  font-style:italic;
-}
-
-.mealsTitle {
-    padding-left:10px;
-  float:left;
-}
-
-.prepTimeTitle {
-    padding-right:10px;
-  float:right;
+  color:#ccc;
 }
 
 .meals li {
   clear: both;
   height: 115px;
   padding-top: 15px;
+}
+
+.userSortSettings { 
+}
+
+.mealDetails {
+  float:right;
+  display:block;
+  width:50%;
+  max-width:50%;
+  background-color:white;
+  height:500px;
 }

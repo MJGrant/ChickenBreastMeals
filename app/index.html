@@ -40,33 +40,43 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view>
-    <p>Search: <input ng-model="query"></p>
-    <select ng-model="orderProp">
-      <option value="title">Alphabetical by Name</option>
-      <option value="cooktime">Shortest Cooktime</option>
-    </select>
+  <div ng-view class="userSortSettings">
+    <p>Search: <input ng-model="query"> &nbsp&nbsp&nbsp Sort by: &nbsp
+        <select ng-model="orderProp">
+          <option value="title">Alphabetical by Name</option>
+          <option value="cooktime">Shortest Prep Time</option>
+        </select>
+      </p>
   </div>
 
-  <aside class="mealsLeft">
-    <p class="mealsTitle">MEALS</p>
-    <p class="prepTimeTitle">PREP TIME</p>
+  <div class="wrapper">
+    <aside class="mealsLeft">
+      <div class="scrollListLabels">
+        <p class="mealsTitle">MEALS</p>
+        <p class="prepTimeTitle">PREP TIME</p>
+      </div>
 
-    <div class="mealsScrollList">
-    <ul>
-      <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton">
-        <a href="#/meals/{{meal.id}}"><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
-        <p class="cooktime">{{meal.cooktime}}</p>
-        <b><a href="#/meals/{{meal.id}}" class="mealTitle">{{meal.title}}</a></b>
-        <p>{{meal.snippet}}</p>
-      </li>
-      </ul>
-    </div><!-- closes mealsScrollList"-->
-  </aside><!--closes mealsList-->
+      <div class="mealsScrollList">
+        <ul>
+          <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton">
+            <a href="#/meals/{{meal.id}}"><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
+            <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
+            <b><a href="#/meals/{{meal.id}}" class="mealTitle">{{meal.title}}</a></b>
+            <p>{{meal.snippet}}</p>
+          </li>
+        </ul>
+      </div><!-- closes mealsScrollList"-->
+    </aside><!--closes mealsList-->
+
+    <div class="mealDetails">
+      <p>Test</p>
+    </div>
+  </div><!--closes wrapper-->
 </div>
 
 </body>
 <footer>
 <p>Total meals: {{meals.length}}</p>
+<p>&copy;2014 Chicken Breast Meals | About | Privacy Policy and Disclosures | Contact</p>
 </footer>
 </html>
