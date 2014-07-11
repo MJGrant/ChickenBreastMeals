@@ -1,13 +1,14 @@
 'use strict';
 
 /* Controllers */
-var cbmApp = angular.module('cbmApp', []);
+var cbmAppControllers = angular.module('cbmAppControllers', []);
 
-cbmApp.controller('MealListCtrl', function($scope, $http) {
+cbmAppControllers.controller('MealListCtrl', ['$scope', '$http',
+	function($scope, $http) {
 	$http.get('data/meals.json').success(function(data) {
 		$scope.meals = data;
 	});
 
-	$scope.siteName = "Chicken Breast Meals.com"; 
+	$scope.siteName = "Chicken Breast Meals.com";
 	$scope.orderProp = 'cooktime';
-});
+}]);

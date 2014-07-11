@@ -1,0 +1,33 @@
+ <div class="userSortSettings">
+    <p>Search: <input ng-model="query"> &nbsp&nbsp&nbsp Sort by: &nbsp
+        <select ng-model="orderProp">
+          <option value="title">Alphabetical by Name</option>
+          <option value="cooktime">Shortest Prep Time</option>
+        </select>
+      </p>
+  </div>
+
+  <div class="wrapper">
+    <aside class="mealsLeft">
+      <div class="scrollListLabels">
+        <p class="mealsTitle">MEALS</p>
+        <p class="prepTimeTitle">PREP TIME</p>
+      </div>
+
+      <div class="mealsScrollList">
+        <ul>
+          <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton">
+            <a href="#/meals/{{meal.id}}"><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
+            <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
+            <b><a href="#/meals/{{meal.id}}" class="mealTitle">{{meal.title}}</a></b>
+            <p>{{meal.snippet}}</p>
+          </li>
+        </ul>
+      </div><!-- closes mealsScrollList"-->
+    </aside><!--closes mealsList-->
+
+    <div class="mealDetails">
+      <p>Test</p>
+    </div>
+  </div><!--closes wrapper-->
+</div>

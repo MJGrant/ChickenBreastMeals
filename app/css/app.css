@@ -8,6 +8,18 @@ a {
   color:gray;
 }
 
+footer {
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-color:#333;
+    color:#fff;
+    font-size:.8em;
+    padding-left:20px;
+}
+
 .wrapper {
   display: flex; 
   justify-content: space-around; 
@@ -37,40 +49,36 @@ a {
   float:right;
 }
 
-.menu {
+.navMenu {
   list-style: none;
   border-bottom: 0.1em solid #eee;
   background-color:#d3d3d3;
-  padding:20px 0;
+  height:30px;
+  display: flex; 
+  font-size:1em;
+  justify-content: center;
 }
 
-.menu, ol, ul {
+.navMenu, ol, ul {
   padding:0px;
 }
 
-.menu a { 
+.navMenu a { 
   font-size:1em;
-  color:#555;
+  color:#fff;
+  text-decoration:none;
 }
 
-.menu:before {
-  /*content: "[";*/
-}
-
-.menu:after {
-  /*content: "]";*/
-}
-
-.menu > li {
+.navMenu > li {
   display: inline;
 }
 
-.menu > li:before {
-  content: "|";
+.navMenu > li:before {
+  content: " * ";
   padding-right: 0.3em;
 }
 
-.menu > li:nth-child(1):before {
+.navMenu > li:nth-child(1):before {
   content: "";
   padding: 0;
 }
