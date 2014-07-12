@@ -7,7 +7,7 @@
       </p>
   </div>
 
-  <div class="wrapper">
+  <div ng-controller="DetailsController" class="wrapper">
     <aside class="mealsLeft">
       <div class="scrollListLabels">
         <p class="mealsTitle">MEALS</p>
@@ -16,18 +16,34 @@
 
       <div class="mealsScrollList">
         <ul>
+          <!--<li><a href="" ng-click="template=templates[1]">Test 1</a></li>-->
+
           <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton">
-            <a href="#/meals/{{meal.id}}"><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
+            <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
             <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
-            <b><a href="#/meals/{{meal.id}}" class="mealTitle">{{meal.title}}</a></b>
+            <b><a href="" ng-click="viewMealDetail(meal.id)" class="mealTitle">{{meal.title}}</a></b>
             <p>{{meal.snippet}}</p>
           </li>
         </ul>
       </div><!-- closes mealsScrollList"-->
     </aside><!--closes mealsList-->
 
+    <!-- details pane on the right -->
     <div class="mealDetails">
-      <p>Test</p>
-    </div>
+      <div>
+        {{mealDetail.title}}
+        <p>{{mealDetail.description}}</p>
+        <h2>Ingredients</h2>
+        <li ng-repeat="ingredient in mealDetail.ingredients">
+          {{ingredient}}
+        </li>
+        <h2>Instructions</h2>
+        <li ng-repeat="instruction in mealDetail.instructions">
+          {{instruction}}
+        </li>
+      </div>
+    </div><!-- closes mealDetails-->
+
+
   </div><!--closes wrapper-->
 </div>

@@ -172,4 +172,5 @@ header {
   max-width:50%;
   background-color:white;
   height:500px;
+  overflow-y:scroll;
 }

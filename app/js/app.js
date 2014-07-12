@@ -11,5 +11,4 @@ config(['$routeProvider', function($routeProvider) {
   	$routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'MealListCtrl'});
   	$routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'MealListCtrl'});
   	$routeProvider.when('/tools', {templateUrl: 'partials/tools.html', controller: 'MealListCtrl'});
-  	$routeProvider.otherwise({redirectTo: '/index'});
 }]);
