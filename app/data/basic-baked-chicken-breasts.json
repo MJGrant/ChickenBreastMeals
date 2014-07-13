@@ -17,11 +17,11 @@
         "Check after 45 minutes",
         "Chicken breasts are done when they're brown and crispy and their internal temp reaches 160."
     ], 
-    "thumbnail": "/images/basicchickenbreast-1.jpg",
+    "thumbnail": "images/meals/basicchickenbreasts-1.jpg",
     "images": [
-    	"/images/basicchickenbreast-1.jpg",
-    	"/images/basicchickenbreast-2.jpg",
-    	"/images/basicchickenbreast-3.jpg"
+    	"images/meals/basicchickenbreasts-1.jpg",
+    	"images/meals/basicchickenbreasts-2.jpg",
+    	"images/meals/basicchickenbreasts-3.jpg"
     ],
     "tags":[
     	"simple",

@@ -8,6 +8,14 @@ a {
   color:gray;
 }
 
+h1 {
+  font-size:1.5em;
+}
+
+h2, h3 {
+  font-size:1.2em;
+}
+
 footer {
     bottom: 0;
     height: 50px;
@@ -173,4 +181,39 @@ header {
   background-color:white;
   height:500px;
   overflow-y:scroll;
+  padding:0 20px;
+}
+
+.mealDescription{
+  font-size:.8em;
+  font-style:italic;
+  padding:0 50px 0 0;
+}
+
+#mealAdditionalImg {
+  width:200px;
+  padding:5px;
+}
+
+.meal-hero-img {
+  float:right;
+  display:block;
+  width:300px;
+  padding:10px;
+  webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  box-shadow: 0 2px 6px rgba(50,50,50,0.50)
+}
+
+.prepTimeData {
+  font-size:.8em;
+  color:#ccc;
+}
+
+#minsData {
+  color:gray;
+}
+
+#prepDataHighlight {
+  color:orange;
 }

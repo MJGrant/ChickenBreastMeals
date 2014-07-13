@@ -30,9 +30,15 @@
 
     <!-- details pane on the right -->
     <div class="mealDetails">
-      <div>
-        {{mealDetail.title}}
-        <p>{{mealDetail.description}}</p>
+        <h1>{{mealDetail.title}}</h1>
+        <img ng-src="{{mealDetail.images[0]}}" class="meal-hero-img">
+        <p class="prepTimeData">
+            <span id="minsData"> READY IN: <span id="prepDataHighlight">{{mealDetail.preptime + mealDetail.cooktime}} mins</span>
+            ( PREP: {{mealDetail.preptime}} mins
+            | COOK: {{mealDetail.cooktime}} mins ) 
+          </p>
+        
+        <p class="mealDescription">{{mealDetail.description}}</p>
         <h2>Ingredients</h2>
         <li ng-repeat="ingredient in mealDetail.ingredients">
           {{ingredient}}
@@ -41,6 +47,10 @@
         <li ng-repeat="instruction in mealDetail.instructions">
           {{instruction}}
         </li>
+        <h2>Tasty Pics</h2>
+        <span ng-repeat="image in mealDetail.images">
+          <img ng-src="{{image}}" id="mealAdditionalImg">
+        </span>
       </div>
     </div><!-- closes mealDetails-->
 

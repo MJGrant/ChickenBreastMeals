@@ -1,6 +1,6 @@
 {
-	"title": "Bacon Wrapped Chicken",
-	"id":"bacon-wrapped-chicken",
+	"title": "Better Than Takeout Orange Chicken",
+	"id":"better-than-takeout-orange-chicken",
 	"description":"Chicken breasts marinated in teriyaki sauce, lemon, garlic, and sesame oil, then grilled to a tasty finish. Very easy and great for a hot summer's evening.",
 	"preptime": 20,
 	"cooktime": 15,
@@ -20,16 +20,15 @@
         "Check after 45 minutes",
         "Grill for 6 to 8 minutes each side, or until juices run clear when chicken is pierced with a fork"
     ], 
-    "thumbnail": "images/meals/baconwrappedchicken-1.jpg",
+    "thumbnail": "images/meals/orangechicken-1.jpg",
     "images": [
-    	"images/meals/baconwrappedchicken-1.jpg",
-    	"images/meals/baconwrappedchicken-2.jpg",
-    	"images/meals/baconwrappedchicken-3.jpg"
+    	"images/meals/orangechicken-1.jpg",
+    	"images/meals/orangechicken-2.jpg",
+    	"images/meals/orangechicken-3.jpg"
     ],
     "tags":[
     	"simple",
     	"baked",
-    	"savory",
-    	"bacon"
+    	"savory"
     ]
 }

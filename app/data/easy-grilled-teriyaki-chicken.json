@@ -20,10 +20,10 @@
         "Check after 45 minutes",
         "Grill for 6 to 8 minutes each side, or until juices run clear when chicken is pierced with a fork"
     ], 
-    "thumbnail": "/images/chickenteriyaki-1.jpg",
+    "thumbnail": "images/meals/chickenteriyaki-1.jpg",
     "images": [
-    	"/images/chickenteriyaki-1.jpg",
-    	"/images/chickenteriyaki-2.jpg"
+    	"images/meals/chickenteriyaki-1.jpg",
+    	"images/meals/chickenteriyaki-2.jpg"
     ],
     "tags":[
     	"simple",
