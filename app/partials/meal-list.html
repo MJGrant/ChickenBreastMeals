@@ -40,13 +40,17 @@
         
         <p class="mealDescription">{{mealDetail.description}}</p>
         <h2>Ingredients</h2>
-        <li ng-repeat="ingredient in mealDetail.ingredients">
-          {{ingredient}}
-        </li>
+          <ul>
+            <li ng-repeat="ingredient in mealDetail.ingredients">
+              {{ingredient}}
+            </li>
+          </ul>
         <h2>Instructions</h2>
-        <li ng-repeat="instruction in mealDetail.instructions">
-          {{instruction}}
-        </li>
+        <ol>
+          <li ng-repeat="instruction in mealDetail.instructions">
+            {{instruction}}
+          </li>
+        </ol>
         <h2>Tasty Pics</h2>
         <span ng-repeat="image in mealDetail.images">
           <img ng-src="{{image}}" id="mealAdditionalImg">
