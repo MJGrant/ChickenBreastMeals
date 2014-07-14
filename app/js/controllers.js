@@ -30,12 +30,3 @@ cbmAppControllers.controller('DetailsController', ['$scope', function($scope) {
 cbmAppControllers.controller('MealDetailsCtrl', ['$scope', '$routeParams', '$http',
 	function($scope, $routeParams, $http) { }
 ]);
-
-
-/*
-cbmAppControllers.controller('MealDetailsCtrl', ['$scope', '$routeParams', '$http',
-	function($scope, $routeParams, $http) {
-	$http.get('data/' + $routeParams.mealID + '.json').success(function(data) {
-		$scope.mealDetail = data;
-	});
-}]);  */
