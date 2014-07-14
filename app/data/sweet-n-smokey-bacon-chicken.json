@@ -1,0 +1,42 @@
+{
+	"title": "Sweet 'n Smokey Bacon Chicken",
+	"id":"sweet-n-smokey-bacon-chicken",
+	"description":"Bacon and chicken. This sounds like a win already, but add lots of savory spices and a chili powder-brown sugar mix and you won't know what hit ya. The perfect blend of sweet-smokey-spicy.",
+	"preptime": 20,
+	"cooktime": 30,
+	"cooktemp": 350,
+	"ingredients": [
+		"1 lb of boneless chicken tenders (about 10)",
+		"10 strips of bacon, sliced in half length-wise",
+		"1/2 to 1 teaspoon salt",
+		"1/2 teaspoon black pepper",
+		"2/3 cup light brown sugar (packed)",
+		"2 tablespoons chili powder",
+		"1 teaspoon onion powder (optional)",
+		"1/2 teaspoon Italian seasoning (optional)",
+		"1 teaspoon garlic powder (optional)"
+	],
+	"instructions": [
+		"Preheat oven to 350 F.",
+        "Mix together salt, paprika, black pepper, onion powder,italian seasoning, and garlic powder", 
+        "Wrap two sliced bacon strips around the chicken tender. Tuck in any loose ends.", 
+        "Mix together brown sugar and chili powder.",
+        "Sprinkle chili-sugar mix over bacon-wrapped chicken, top and bottom. Press sugar mixture into chicken to pack it on.",
+        "Place chicken on a greased grill pan.",
+        "Bake for 25-30 minutes or until chicken is done and bacon is crisp.",
+        "Optional: Broil for the last 5 minutes to make the bacon extra crispy.",
+        "Serve piping hot! Garnish with salt and parsley (if desired)."
+    ], 
+    "thumbnail": "images/meals/baconwrappedchicken-1.jpg",
+    "images": [
+    	"images/meals/baconwrappedchicken-1.jpg",
+    	"images/meals/baconwrappedchicken-2.jpg",
+    	"images/meals/baconwrappedchicken-3.jpg"
+    ],
+    "tags":[
+    	"sweet & smokey",
+    	"chili",
+    	"baked",
+    	"bacon"
+    ]
+}

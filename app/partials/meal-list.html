@@ -39,6 +39,12 @@
           </p>
         
         <p class="mealDescription">{{mealDetail.description}}</p>
+
+
+        <span class="tagNames">
+        <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
+        </span>
+
         <h2>Ingredients</h2>
           <ul>
             <li ng-repeat="ingredient in mealDetail.ingredients">

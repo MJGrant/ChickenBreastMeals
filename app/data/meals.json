@@ -28,10 +28,10 @@
         "snippet": "Fried to a crisp. Coat with a sweet sauce for maximum deliciousness."
     },
     {
-        "title":"Bacon Wrapped Chicken",
-        "id":"bacon-wrapped-chicken",
+        "title":"Sweet 'n Smokey Bacon Chicken",
+        "id":"sweet-n-smokey-bacon-chicken",
         "imageUrl":"images/meals/baconwrappedchicken-1.jpg",
-        "cooktime": 25, 
+        "cooktime": 50, 
         "snippet": "Exactly what it says on the tin."
     },
     {

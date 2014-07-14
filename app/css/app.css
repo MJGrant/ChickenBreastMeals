@@ -173,6 +173,10 @@ header {
 .userSortSettings { 
 }
 
+/*********************
+/* Meal Details pane (right side)
+/*********************/
+
 .mealDetails {
   float:right;
   display:block;
@@ -221,4 +225,14 @@ header {
 
 #prepDataHighlight {
   color:orange;
+}
+
+.tagNames {
+  list-style-type:none;
+}
+
+.tagNames li {
+  display:inline;
+  padding-right:8px;
+  color:gray;
 }
