@@ -1,0 +1,42 @@
+{
+	"title": "Wingaling Baked Chicken \"Wings\"",
+	"id":"wingaling-chicken",
+	"description":"Hear them wing! These easy-to-make hot wings are crispy without being fried. Yummy to snack on, and only 10 minutes to prepare (with 1 hour of refrigeration time). Add more cayenne pepper or use a higher hot sauce to butter ratio to kick them up a notch! All the flavor of buffalo wings with the healthfulness of chicken breast.",
+	"preptime": 10,
+	"cooktime": 30,
+	"cooktemp": 350,
+	"ingredients": [
+		"1 lb of boneless chicken tenders (about 10)",
+		"1/2 cup melted butter",
+		"3/4 cup all-purpose flour",
+		"1/2 teaspoon cayenne pepper",
+		"1/2 teaspoon garlic powder",
+		"1/2 teaspoon salt",
+		"1/2 cup hot pepper sauce"
+	],
+	"instructions": [
+		"Line a baking sheet with aluminum foil and lightly grease with cooking spray.",
+		"Place flour, cayenne pepper, garlic powder, and salt into a resealable plastic bag and shake to mix.",
+		"Dry the chicken tenders with a paper towel before the next step.",
+		"Add the chicken tenders, seal, and toss until well-coated.",
+		"Place the 'wings' onto the prepared baking sheet, and place into the refrigerator.",
+		"Refrigerate at least one hour.",
+        "Preheat oven to 400 F.",
+        "Whisk together the melted butter and hot sauce in a small bowl",
+        "Dip wings into butter mixture and place back onto baking sheet.",
+        "Bake in pre-heated oven until the chicken is crispy on the outside, about 45 minutes.",
+        "Turn the wings over halfway during cooking so they cook evenly.",
+        "Serve hot, accompanied by sweet potatoes, carrots, peas, and red delicious apples (as desired)."
+    ], 
+    "thumbnail": "images/meals/wingalingchicken-1.jpg",
+    "images": [
+    	"images/meals/wingalingchicken-1.jpg",
+    	"images/meals/wingalingchicken-2.jpg",
+    	"images/meals/wingalingchicken-3.jpg"
+    ],
+    "tags":[
+    	"hot",
+    	"baked",
+    	"crispy"
+    ]
+}

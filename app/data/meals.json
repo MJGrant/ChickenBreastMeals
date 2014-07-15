@@ -47,5 +47,12 @@
         "imageUrl":"images/meals/orangechicken-1.jpg",
         "cooktime": 20, 
         "snippet": "Sweet, spicy, and, most importantly: crispy. This delicious homemade orange chicken recipe is easy to make and super tasty."
+    },
+     {
+        "title":"Wingaling Baked Chicken \"Wings\"",
+        "id":"wingaling-chicken",
+        "imageUrl":"images/meals/wingalingchicken-1.jpg",
+        "cooktime": 20, 
+        "snippet": "These gigantic chicken \"wings\" are made with chicken breast and baked rather than fried."
     }
 ]
