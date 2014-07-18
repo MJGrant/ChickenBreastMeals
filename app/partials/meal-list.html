@@ -20,7 +20,13 @@
         <ul>
           <!--<li><a href="" ng-click="template=templates[1]">Test 1</a></li>-->
 
-          <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton" ng-class="{selectedMeal: selected}">
+          <li 
+            ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+            ng-class="{selectedMeal: selected, definition_hover:hover}"
+            ng-mouseenter="hover = true"
+            ng-mouseleave="hover = false"
+            class="mealPreviewButton"
+            >
             <!--<input type="checkbox" ng-model="error">apply red class-->
             <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
             <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
