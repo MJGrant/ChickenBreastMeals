@@ -15,13 +15,16 @@
       </div>
 
       <div class="mealsScrollList">
+
+ 
         <ul>
           <!--<li><a href="" ng-click="template=templates[1]">Test 1</a></li>-->
 
-          <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton">
+          <li ng-repeat="meal in meals | filter: query | orderBy: orderProp" class="mealPreviewButton" ng-class="{selectedMeal: selected}">
+            <!--<input type="checkbox" ng-model="error">apply red class-->
             <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
             <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
-            <b><a href="" ng-click="viewMealDetail(meal.id)" class="mealTitle">{{meal.title}}</a></b>
+            <b><a href="" ng-click="viewMealDetail(meal.id); selected=true" class="mealTitle">{{meal.title}}</a></b>
             <p>{{meal.snippet}}</p>
           </li>
         </ul>
