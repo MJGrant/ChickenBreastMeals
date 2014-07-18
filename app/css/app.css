@@ -96,6 +96,15 @@ ul, ol {
   display:table;
 }
 
+.navMenu li a { 
+  padding:4px;
+  border-radius:4px;
+}
+
+.navMenu li a:hover {
+  background-color:#fff;
+}
+
 .navMenu > li {
   display: table-cell; 
   vertical-align:middle;
