@@ -1,11 +1,31 @@
 /* app css stylesheet */
+/* COLORS */
+/*Pale beige: #edd2c7
+ *Yellow: #f1bd4d
+ *Pale gray: #f1f1f1
+ *Light gray: #d7cac9
+ *Dark gray: #b9a7a5 
+ *Orange: #ed783b
+ *Brown red: #793d3d
+ *Dark brown red: #351414
+ */
+
 html { 
   background-color:#f1f1f1;
   overflow:hidden;
 }
 
 a {
-  color:gray;
+  color:#ed783b;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#f1bd4d;
+}
+
+h1, h2, h2 {
+  color:#351414;
 }
 
 h1 {
@@ -16,16 +36,25 @@ h2, h3 {
   font-size:1.2em;
 }
 
+header { 
+  height:70px;
+  border:1px red solid;
+}
 footer {
     bottom: 0;
-    height: 50px;
+    height: 60px;
     left: 0;
     position: absolute;
     width: 100%;
-    background-color:#333;
+    background-color:#351414;
     color:#fff;
     font-size:.8em;
     padding-left:20px;
+}
+/*padding / margin fix for lists */
+ul, ol {
+  padding:0;
+  margin:0;
 }
 
 .wrapper {
@@ -59,36 +88,26 @@ footer {
 
 .navMenu {
   list-style: none;
-  border-bottom: 0.1em solid #eee;
-  background-color:#d3d3d3;
-  height:30px;
-  display: flex; 
-  font-size:1em;
-  justify-content: center;
-}
-
-.navMenu, ol, ul {
-  padding:0px;
-}
-
-.navMenu a { 
-  font-size:1em;
-  color:#fff;
-  text-decoration:none;
+  font-size:1.2em;
+  vertical-align:middle;
+  text-transform:uppercase;
+  padding-top:10px;
+  padding-left:0px;
 }
 
 .navMenu > li {
   display: inline;
+  padding-right:.8em;
 }
 
 .navMenu > li:before {
-  content: " * ";
-  padding-right: 0.3em;
+  content: "»";
+  padding-right: 0.1em;
 }
 
 .navMenu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+  content: "»";
+  padding-left:80px;
 }
 
 .mealsLeft {
@@ -97,6 +116,9 @@ footer {
   overflow:hidden;
   width:40%;
   max-width:40%;
+  webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  box-shadow: 0 2px 6px rgba(50,50,50,0.50)
 }
 
 .mealsLeft h1 {
@@ -129,7 +151,6 @@ footer {
 
 .mealTitle {
   font-size:1.2em;
-  color:orange;
   text-decoration:none;
 }
 
@@ -140,14 +161,14 @@ footer {
   margin:5px;
 }
 
-header {
-  background-color:white;
-}
-
 .siteTitle { 
-  color:orange;
   text-decoration:none;
   font-size:1.5em;
+}
+
+.siteTitle img {
+  float:left;
+  display:block;
 }
 
 .cooktime {
@@ -187,6 +208,9 @@ header {
   overflow-y:scroll;
   padding:0 20px;
   font-size:.8em;
+  webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+  box-shadow: 0 2px 6px rgba(50,50,50,0.50)
 }
 
 .mealDetails ol, .mealDetails ul {
@@ -224,7 +248,7 @@ header {
 }
 
 #prepDataHighlight {
-  color:orange;
+  color:#ed783b;
 }
 
 .tagNames {
