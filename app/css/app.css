@@ -140,6 +140,10 @@ ul, ol {
     list-style: none;
 }
 
+.mealsScrollList li:last-child {
+  margin-bottom:100px;
+}
+
 .mealPreviewButton {
   width:94%;
   height:90px;
