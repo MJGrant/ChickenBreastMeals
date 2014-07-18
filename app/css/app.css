@@ -101,8 +101,12 @@ ul, ol {
   border-radius:4px;
 }
 
-.navMenu li a:hover {
-  background-color:#fff;
+.mealPreviewButton:hover {
+  background-color:#f1f1f1;
+  transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;  
+  -webkit-transition: background-color .2s linear; 
+  -ms-transition: background-color .2s linear; 
 }
 
 .navMenu > li {
@@ -152,10 +156,6 @@ ul, ol {
   height:100%;
 }
 
-.definition_hover { 
-  background-color:#f1f1f1;
-}
-
 .mealsScrollList li {
     list-style: none;
 }
@@ -171,6 +171,11 @@ ul, ol {
   padding:2px;
   font-size:.8em;
   overflow-y:hidden;
+  background-color:white;
+  transition: background-color .5s linear;
+  -moz-transition: background-color .5s linear;  
+  -webkit-transition: background-color .5s linear; 
+  -ms-transition: background-color .5s linear; 
 }
 
 .selectedMeal .mealTitle {

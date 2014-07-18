@@ -22,10 +22,8 @@
 
           <li 
             ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
-            ng-class="{selectedMeal: selected, definition_hover:hover}"
-            ng-mouseenter="hover = true"
-            ng-mouseleave="hover = false"
-            class="mealPreviewButton"
+            ng-class="{selectedMeal: selected}"
+            class="mealPreviewButton" 
             >
             <!--<input type="checkbox" ng-model="error">apply red class-->
             <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
