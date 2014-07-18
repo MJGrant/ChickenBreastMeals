@@ -58,6 +58,10 @@ ul, ol {
   margin:0;
 }
 
+/*********************
+/* Site Layout and Navigation
+/*********************/
+
 .wrapper {
   display: flex; 
   justify-content: space-around; 
@@ -77,15 +81,6 @@ ul, ol {
   padding-left:10px;
 }
 
-.mealsTitle {
-  padding-left:10px;
-  float:left;
-}
-
-.prepTimeTitle {
-  padding-right:10px;
-  float:right;
-}
 
 .navMenu {
   list-style: none;
@@ -99,14 +94,6 @@ ul, ol {
 .navMenu li a { 
   padding:4px;
   border-radius:4px;
-}
-
-.mealPreviewButton:hover {
-  background-color:#f1f1f1;
-  transition: background-color .2s linear;
-  -moz-transition: background-color .2s linear;  
-  -webkit-transition: background-color .2s linear; 
-  -ms-transition: background-color .2s linear; 
 }
 
 .navMenu > li {
@@ -128,22 +115,39 @@ ul, ol {
   content: " »";
 }
 
-.mealsLeft {
+.navMenu li a:hover {
+  background-color:white;
+}
+
+/*********************
+/* Meal List (left side)
+/*********************/
+
+.mealsListLeft {
   background-color:white;
   height:500px;
   overflow:hidden;
   width:40%;
   max-width:40%;
-  webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-  -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-  box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    box-shadow: 0 2px 6px rgba(50,50,50,0.50);
   border-radius:6px;
 }
-
 
 .mealsLeft h1 {
   margin:0 auto;
   font-style:italic;
+}
+
+.mealsTitle {
+  padding-left:10px;
+  float:left;
+}
+
+.prepTimeTitle {
+  padding-right:10px;
+  float:right;
 }
 
 .meals {
@@ -172,10 +176,22 @@ ul, ol {
   font-size:.8em;
   overflow-y:hidden;
   background-color:white;
-  transition: background-color .5s linear;
-  -moz-transition: background-color .5s linear;  
-  -webkit-transition: background-color .5s linear; 
-  -ms-transition: background-color .5s linear; 
+    transition: background-color .5s linear;
+    -moz-transition: background-color .5s linear;  
+    -webkit-transition: background-color .5s linear; 
+    -ms-transition: background-color .5s linear; 
+}
+
+.mealPreviewButton:hover {
+  background-color:#f1f1f1;
+  transition: background-color .2s linear;
+  -moz-transition: background-color .2s linear;  
+  -webkit-transition: background-color .2s linear; 
+  -ms-transition: background-color .2s linear; 
+}
+
+.selectedMeal {
+  background-color:white;
 }
 
 .selectedMeal .mealTitle {
@@ -228,9 +244,6 @@ ul, ol {
   padding-top: 15px;
 }
 
-.userSortSettings { 
-}
-
 /*********************
 /* Meal Details pane (right side)
 /*********************/
@@ -245,9 +258,9 @@ ul, ol {
   overflow-y:scroll;
   padding:0 20px;
   font-size:.8em;
-  webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-  -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-  box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+    box-shadow: 0 2px 6px rgba(50,50,50,0.50);
   border-radius:6px;
 }
 
