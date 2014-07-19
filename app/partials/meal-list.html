@@ -32,7 +32,13 @@
       </aside><!--closes mealsSnippetContainer-->
 
     <!-- details pane on the right -->
-    <div class="mealDetails">
+    <div class="mealDetailsContainer">
+
+      <div class="mealDetailsEmpty" ng-hide="mealDetail">
+        It's empty!
+      </div><!-- closes mealDetailsEmpty-->
+
+      <div class="mealDetailsContents" ng-show="mealDetail">
         <h1>{{mealDetail.title}}</h1>
         <img ng-src="{{mealDetail.images[0]}}" class="meal-hero-img">
         <p class="prepTimeData">
@@ -43,30 +49,28 @@
         
         <p class="mealDescription">{{mealDetail.description}}</p>
 
-
         <span class="tagNames">
         <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
         </span>
 
-        <h2>You Will Need</h2>
-          <ul>
+          <h2>You Will Need</h2>
+            <ul>
             <li ng-repeat="ingredient in mealDetail.ingredients">
               {{ingredient}}
             </li>
-          </ul>
-        <h2>Step by Step Instructions</h2>
-        <ol>
-          <li ng-repeat="instruction in mealDetail.instructions">
-            {{instruction}}
-          </li>
-        </ol>
-        <h2>Tasty Pics</h2>
-        <span ng-repeat="image in mealDetail.images">
-          <img ng-src="{{image}}" id="mealAdditionalImg">
-        </span>
-      </div>
-    </div><!-- closes mealDetails-->
-
+            </ul>
+          <h2>Step by Step Instructions</h2>
+          <ol>
+            <li ng-repeat="instruction in mealDetail.instructions">
+              {{instruction}}
+            </li>
+          </ol>
+          <h2>Tasty Pics</h2>
+          <span ng-repeat="image in mealDetail.images">
+            <img ng-src="{{image}}" id="mealAdditionalImg">
+          </span>
+        </div><!--closes mealDetailsContents-->
+      </div><!-- closes mealDetailsContainer-->
 
   </div><!--closes wrapper-->
 </div>
