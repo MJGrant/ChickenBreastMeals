@@ -292,6 +292,18 @@ ul, ol {
   margin-left:30px;
 }
 
+.mealDetailsEmpty { 
+  font-size:1.2em;
+  text-align:center;
+  margin:0 auto;
+  padding-top:30px;
+}
+
+.mealDetailsEmpty img {
+  display:block;
+  margin:10% auto;
+}
+
 .mealDescription{
   font-style:italic;
   padding:0 50px 0 0;
