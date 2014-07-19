@@ -16,6 +16,14 @@ cbmAppControllers.controller('MealListCtrl', ['$scope', '$http',
 			alert("Error loading recipe." + data);
 		});
 	};
+
+	$scope.selectThisMeal = function(id) {
+		$scope.meals.forEach(function(mealIndex) {
+			mealIndex.selected=false;
+		});
+		$scope.meals[id].selected=true;
+	};
+
 	$scope.siteName = "Chicken Breast Meals.com";
 	$scope.orderProp = 'cooktime';
 }]);
