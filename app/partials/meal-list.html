@@ -8,29 +8,28 @@
   </div>
 
   <div ng-controller="DetailsController" class="wrapper">
-    <aside class="mealsListLeft">
-      <div class="scrollListLabels">
-        <p class="mealsTitle">MEALS</p>
-        <p class="prepTimeTitle">PREP TIME</p>
-      </div>
+    <aside class="mealsSnippetContainer">
+          <div class="scrollListLabels">
+            <p class="mealsTitle">MEALS</p>
+            <p class="prepTimeTitle">PREP TIME</p>
+          </div><!-- closes scrollListLabels-->
 
-      <div class="mealsScrollList">
-
- 
-        <ul>
-          <li 
-            ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
-            ng-class="{selectedMeal: selected}"
-            class="mealPreviewButton" 
-            >
-            <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
-            <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
-            <b><a href="" ng-click="viewMealDetail(meal.id); selected=true" class="mealTitle">{{meal.title}}</a></b>
-            <p class="snippet">{{meal.snippet}}</p>
-          </li>
-        </ul>
-      </div><!-- closes mealsScrollList"-->
-    </aside><!--closes mealsList-->
+          <div class="mealsScrollList">
+            <ul>
+              <li 
+                ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+                ng-class="{selectedMeal: selected}"
+                class="mealPreviewButton" 
+                >
+                <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
+                <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
+                <b><a href="" ng-click="viewMealDetail(meal.id); selected=true" class="mealTitle">{{meal.title}}</a></b>
+                <p class="snippet">{{meal.snippet}}</p>
+              </li>
+            <!--failed white gradient experiment <div class="mealsScrollListGradient">TEST</div>-->
+              <!--closes mealsScrollListGradient-->
+          </div><!-- closes mealsScrollList"-->
+      </aside><!--closes mealsSnippetContainer-->
 
     <!-- details pane on the right -->
     <div class="mealDetails">

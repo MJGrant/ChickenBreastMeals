@@ -123,11 +123,12 @@ ul, ol {
 /* Meal List (left side)
 /*********************/
 
-.mealsListLeft {
+.mealsSnippetContainer {
   height:500px;
-  overflow:hidden;
-  width:40%;
-  max-width:40%;
+  width:41%;
+  max-width:41%;
+  overflow-y:hidden;
+  overflow-x:hidden;
   border-radius:6px;
   background-color:white;
     webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
@@ -135,7 +136,11 @@ ul, ol {
     box-shadow: 0 2px 6px rgba(50,50,50,0.50);
 }
 
-.mealsLeft h1 {
+.mealsSnippetContainer:hover{
+  overflow-y:scroll;
+}
+
+.mealsSnippetContainer h1 {
   margin:0 auto;
   font-style:italic;
 }
@@ -154,8 +159,15 @@ ul, ol {
   list-style: none;
 }
 
+.mealsScrollListGradient {
+  position:absolute;
+  background-color:red;
+  height:10px;
+  width:100%;
+ /* -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));*/
+}
+
 .mealsScrollList {
-  overflow-y:scroll;
   width:100%;
   height:100%;
   padding-left:10px;
@@ -170,7 +182,7 @@ ul, ol {
 }
 
 .mealPreviewButton {
-  width:96%;
+  width:94%;
   height:90px;
   padding:3px;
   margin:3px 0;
@@ -203,7 +215,11 @@ ul, ol {
 
 .selectedMeal .mealTitle {
   font-style:italic;
-  color:#f1bd4d;
+  color:#351414;
+   transition: color .5s linear;
+  -moz-transition: color .5s linear;  
+  -webkit-transition: color .5s linear; 
+  -ms-transition: color .5s linear; 
 }
 .selectedMeal .mealTitle:after {
     content: " »";
@@ -262,13 +278,17 @@ ul, ol {
   max-width:50%;
   background-color:white;
   height:500px;
-  overflow-y:scroll;
+  overflow-y:hidden;
   padding:0 20px;
   font-size:.8em;
     webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
     -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
     box-shadow: 0 2px 6px rgba(50,50,50,0.50);
   border-radius:6px;
+}
+
+.mealDetails:hover { 
+  overflow-y:scroll;
 }
 
 .mealDetails ol, .mealDetails ul {
@@ -321,32 +341,4 @@ ul, ol {
   display:inline;
   padding-right:8px;
   color:gray;
-}
-
-
-/*********************
-/* Scroll bar css
-/*********************/
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 6px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3); 
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: rgba(255,0,0,0.8); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255,0,0,0.4); 
 }
