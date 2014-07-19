@@ -81,6 +81,10 @@ ul, ol {
   padding-left:10px;
 }
 
+.userSortSettings {
+  padding-left:3.5em;
+}
+
 
 .navMenu {
   list-style: none;
