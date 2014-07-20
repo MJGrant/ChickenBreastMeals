@@ -17,13 +17,14 @@
           <div class="mealsScrollList">
             <ul>
               <li 
+                ng-click="viewMealDetail(meal.id); selectThisMeal($index)"
                 ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
                 ng-class="{selectedMeal:meals[$index].selected}"
                 class="mealPreviewButton" 
                 >
                 <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
                 <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
-                <b><a href="" ng-click="viewMealDetail(meal.id); selectThisMeal($index)" class="mealTitle">{{meal.title}}</a></b>
+                <b><a href="" class="mealTitle">{{meal.title}}</a></b>
                 <p class="snippet">{{meal.snippet}}</p>
               </li>
             <!--failed white gradient experiment <div class="mealsScrollListGradient">TEST</div>-->
