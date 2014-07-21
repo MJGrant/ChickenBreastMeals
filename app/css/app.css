@@ -355,3 +355,50 @@ ul, ol {
   padding-right:8px;
   color:gray;
 }
+
+/***********
+CMS
+************/
+
+.cms-wrapper {
+  display: flex; 
+  justify-content: space-around; 
+}
+
+.cms-recipeEdit input { 
+  width: 600px; 
+  margin:5px;
+  padding:1px;
+}
+
+.cms-checkboxes input { 
+  width:30px;
+
+}
+.cms-recipeInstructionSteps textarea {
+  width:600px;
+  height:100px;
+  margin:5px;
+  padding:1px;
+}
+
+.cms-heroImgPreview {
+  width:100px;
+}
+
+.cms-recipeTitleList {
+  height:500px;
+  width:26%;
+  overflow-y:scroll;
+  margin-left:20px;
+  background-color:white;
+}
+
+.cms-recipeEditContainer {
+  height:500px;
+  width:68%;
+  overflow-y:scroll;
+  display:block;
+  float:right;
+  background-color:white;
+}

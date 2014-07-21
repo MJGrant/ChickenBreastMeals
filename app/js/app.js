@@ -12,4 +12,5 @@ config(['$routeProvider', function($routeProvider) {
   	$routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'MealListCtrl'});
   	$routeProvider.when('/tools', {templateUrl: 'partials/tools.html', controller: 'MealListCtrl'});
   	$routeProvider.when('/privacy-disclosures', {templateUrl: 'partials/privacy-disclosures.html', controller: 'MealListCtrl'});
+  	$routeProvider.when('/cms', {templateUrl: 'admin/cms.html', controller: 'MealListCtrl'});
 }]);

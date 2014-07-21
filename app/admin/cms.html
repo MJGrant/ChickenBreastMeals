@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cbmApp" class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CMS for CBM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+	</head>
+
+	<body ng-controller="MealListCtrl">
+		<header>
+			<h1>Edit Chicken Breast Meals Recipe Data</h1>
+            <p>Total meals in data: {{meals.length}}</p>
+	   </header>
+
+     <div ng-controller="DetailsController" class="cms-wrapper">
+  	   <div class="cms-recipeTitleList">
+          <ul>
+              <li
+               ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+               ng-class="{selectedMeal:meals[$index].selected}">
+              <a href="" ng-click="viewMealDetail(meal.id); selectThisMeal($index)">{{meal.title}}</a>
+              </li>
+          </ul>
+        </div><!-- closes mealsScrollList"-->
+
+
+        <div class="cms-recipeEditContainer">
+
+        <div class="cms-recipeEdit">
+          <h2>EDIT MODE: {{mealDetail.title}}</h2><button>EXPORT DATA</button>
+          </br>
+          <b>Meal Name:</b><input ng-model="mealDetail.title"/>
+          </br>
+          <b>Meal ID: {{mealDetail.id}}</b>
+          </br>
+
+          <h2>Pics</h2>
+          <span ng-repeat="image in mealDetail.images">
+            <p><b>Image {{$index}}:</b></p>
+            <input ng-model="mealDetail.images[$index]">
+            <br>
+            <img ng-src="{{image}}" id="mealAdditionalImg">
+          </span>
+          </br>
+
+          <div class="cms-checkboxes">
+          <input type="checkbox" name="dietary" value="noGluten">Gluten free<br>
+          <input type="checkbox" name="dietary" value="noDairy">Dairy free<br>
+          <input type="checkbox" name="dietary" value="lowCarb">Low carb<br>
+          </div>
+
+          <b>Prep time:</b><input ng-model="mealDetail.preptime">
+          </br>
+
+          <b>Cook time:</b><input ng-model="mealDetail.cooktime">
+          </br>
+
+          <b>Oven temp:</b><input ng-model="mealDetail.cooktemp">
+          </br>
+        </br>
+          <b>Ingredients:</b>
+          <ol>
+            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="ingredient"></li>
+            <li><input ng-model="newIngredient"><a href="" ng-click="mealDetail.ingredients.push(newIngredient)">ADD</a></li>
+          </ol>
+
+          <b>Recipe Steps:</b>
+          <ol class="cms-recipeInstructionSteps">
+            <li ng-repeat="instruction in mealDetail.instructions"><textarea ng-model="instruction"></textarea></li>
+            <li><textarea ng-model="newInstruction"></textarea><a href="" ng-click="mealDetail.instructions.push(newInstruction)">ADD</a>
+            </li>
+          </ol>
+
+        </div>
+
+        </div>
+      </div><!--closes cms-wrapper-->
+
+	 </body>
+</html>
