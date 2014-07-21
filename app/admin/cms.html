@@ -48,15 +48,6 @@
           <b>Meal ID: {{mealDetail.id}}</b>
           </br>
 
-          <h2>Pics</h2>
-          <span ng-repeat="image in mealDetail.images">
-            <p><b>Image {{$index}}:</b></p>
-            <input ng-model="mealDetail.images[$index]">
-            <br>
-            <img ng-src="{{image}}" id="mealAdditionalImg">
-          </span>
-          </br>
-
           <div class="cms-checkboxes">
           <input type="checkbox" name="dietary" value="noGluten">Gluten free<br>
           <input type="checkbox" name="dietary" value="noDairy">Dairy free<br>
@@ -84,6 +75,17 @@
             <li><textarea ng-model="newInstruction"></textarea><a href="" ng-click="mealDetail.instructions.push(newInstruction)">ADD</a>
             </li>
           </ol>
+
+          <h2>Photos</h2>
+          <span ng-repeat="image in mealDetail.images">
+            <p><b>Image {{$index + 1}}:</b></p>
+            <input ng-model="mealDetail.images[$index]">
+            <br>
+            <img ng-src="{{image}}" id="mealAdditionalImg">
+          </span>
+          </br>
+          <input ng-model="newImagePath"><a href="" ng-click="mealDetail.images.push(newImagePath)">ADD IMAGE</a>
+          </br>
 
         </div>
 
