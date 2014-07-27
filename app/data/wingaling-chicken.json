@@ -14,6 +14,9 @@
 		"1/2 teaspoon salt",
 		"1/2 cup hot pepper sauce"
 	],
+	"glutenfree":false,
+    "dairyfree":false,
+    "lowcarb":false,
 	"instructions": [
 		"Line a baking sheet with aluminum foil and lightly grease with cooking spray.",
 		"Place flour, cayenne pepper, garlic powder, and salt into a resealable plastic bag and shake to mix.",

@@ -16,6 +16,9 @@
 		"1/2 teaspoon Italian seasoning (optional)",
 		"1 teaspoon garlic powder (optional)"
 	],
+    "glutenfree":true,
+    "dairyfree":true,
+    "lowcarb":false,
 	"instructions": [
 		"Preheat oven to 350 F.",
         "Mix together salt, paprika, black pepper, onion powder,italian seasoning, and garlic powder", 

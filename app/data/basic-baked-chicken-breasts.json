@@ -10,6 +10,9 @@
 		"butter (optional)",
 		"salt (optional)"
 	],
+    "glutenfree":true,
+    "dairyfree":true,
+    "lowcarb":true,
 	"instructions": [
 		"Pre-heat oven to 450",
         "Arrange the chicken breasts in a large pan", 

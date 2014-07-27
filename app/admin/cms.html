@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="cbmApp" class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CMS for CBM</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/app.css"/>
-    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-    -->
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/directives.js"></script>
-	</head>
-
-	<body ng-controller="MealListCtrl">
+  <div ng-controller="AdminCtrl">
 		<header>
 			<h1>Edit Chicken Breast Meals Recipe Data</h1>
             <p>Total meals in data: {{meals.length}}</p>
@@ -41,12 +19,14 @@
         <div class="cms-recipeEditContainer">
 
         <div class="cms-recipeEdit">
-          <h2>EDIT MODE: {{mealDetail.title}}</h2><button>EXPORT DATA</button>
+          <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal()">EXPORT DATA</button>
           </br>
           <b>Meal Name:</b><input ng-model="mealDetail.title"/>
           </br>
           <b>Meal ID: {{mealDetail.id}}</b>
           </br>
+          <b>Snippet</b>
+          <b>Description</b>
 
           <div class="cms-checkboxes">
           <input type="checkbox" name="dietary" value="noGluten">Gluten free<br>
@@ -92,5 +72,5 @@
         </div>
       </div><!--closes cms-wrapper-->
 
-	 </body>
+	 </div>
 </html>

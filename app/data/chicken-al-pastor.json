@@ -7,12 +7,17 @@
 	"cooktemp": "high",
 	"ingredients": [
 		"4 skinless boneless chicken breasts",
-		"1 cup teriyaki sauce",
-		"1/4 cup lemon juice",
-		"2 teaspoons minced ginger",
-		"2 teaspoons sesame oil",
-		"salt (optional)"
+		"2 oz ancho chilis",
+		"2 oz Guajillo chilis",
+		"1 dried chipotle pepper",
+		"1 small can of crushed pineapple",
+		"1 tbsp molasses",
+		"1/2 cup orange juice",
+		"1/4 cup white vinegar",
 	],
+	"glutenfree":true,
+    "dairyfree":true,
+    "lowcarb":false,
 	"instructions": [
 		"Place chicken, teriyaki sauce, lemon juice, garlic, and sesame oil in a large resealable plastic bag. Seal bag, and shake to coat. Place in refrigerator for 24 hours, turning every so often.",
         "Preheat grill for high heat.", 

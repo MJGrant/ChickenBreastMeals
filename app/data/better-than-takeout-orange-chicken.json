@@ -13,6 +13,9 @@
 		"2 teaspoons sesame oil",
 		"salt (optional)"
 	],
+	"glutenfree":true,
+    "dairyfree":true,
+    "lowcarb":false,
 	"instructions": [
 		"Place chicken, teriyaki sauce, lemon juice, garlic, and sesame oil in a large resealable plastic bag. Seal bag, and shake to coat. Place in refrigerator for 24 hours, turning every so often.",
         "Preheat grill for high heat.", 
