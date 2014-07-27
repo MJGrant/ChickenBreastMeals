@@ -85,7 +85,7 @@ app.route('/api/db/:meal_id')
 			if (err) {
 				res.send(err);
 			}
-			res.json(defs);
+			res.json(meals);
 		});
 	});
 });
