@@ -38,11 +38,6 @@ var db = mongoose.model('Meals', {
 	dietary:{dairyfree: Boolean, glutenfree: Boolean, lowcarb: Boolean}
 });
 
-app.route('/login')
-	.get(function(req, res) {
-		res.send('this is the login form');
-	});
-
 app.route('/api/db/')
 	.get(function(req,res) { //request, response
 		console.log("calling get");
@@ -76,6 +71,24 @@ app.route('/api/db/')
 			});
 		});
 	});
+
+app.route('/api/db/:meal_id')
+	.delete(function(req,res) {
+		db.remove({
+			_id : req.params.meal_id
+		}, function(err) {
+			if (err) {
+				res.send(err);
+			}
+			//get and return all the meals
+		db.find(function(err,meals) {
+			if (err) {
+				res.send(err);
+			}
+			res.json(defs);
+		});
+	});
+});
 
 app.route('*') //catch all
 	.get(function(req,res) {

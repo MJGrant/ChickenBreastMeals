@@ -20,15 +20,32 @@ cbmAppControllers.controller('MasterCtrl', function($scope, $http) {
 			console.log("post success: " + data.title);
 		})
 		.error(function(data) {
-			console.log("error");
+			console.log("error: " + data);
 		});
 	};
+
+	$scope.deleteExistingMeal = function(id) {
+		$http.delete('/api/db/'+ id)
+			.success(function(data) {
+				$scope.meals = data;
+				console.log("Successfully deleted a meal. " + data);
+			})
+			.error(function(data) {
+				console.log("error: " + data);
+			})
+	}
 });
 
 cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 	$scope.test = 'test';
-	$scope.postMeal = function() {
-		$scope.createNewMeal($scope.mealDetail);
+	$scope.postMeal = function(mealDetail) {
+		console.log("mealDetail title: " + mealDetail.title);
+		$scope.createNewMeal(mealDetail);
+	};
+
+	$scope.deleteMeal = function(mealDetail) {
+		console.log("DELETED!");
+		$scope.deleteExistingMeal(mealDetail);
 	};
 }]);
 
