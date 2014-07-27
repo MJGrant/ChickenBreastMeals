@@ -7,17 +7,17 @@
       </p>
   </div>
 
-  <div ng-controller="DetailsController" class="wrapper">
+  <div class="wrapper">
     <aside class="mealsSnippetContainer">
           <div class="scrollListLabels">
             <p class="mealsTitle">MEALS</p>
             <p class="prepTimeTitle">PREP TIME</p>
           </div><!-- closes scrollListLabels-->
 
-          <div class="mealsScrollList">
+          <div class="mealsScrollList" ng-controller="MealListCtrl">
             <ul>
               <li 
-                ng-click="viewMealDetail(meal.id); selectThisMeal($index)"
+                ng-click="viewMealDetail($index); selectThisMeal($index)"
                 ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
                 ng-class="{selectedMeal:meals[$index].selected}"
                 class="mealPreviewButton" 
