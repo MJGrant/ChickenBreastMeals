@@ -4,13 +4,13 @@
             <p>Total meals in data: {{meals.length}}</p>
 	   </header>
 
-     <div class="cms-wrapper">
+     <div class="cms-wrapper" ng-controller="AdminMealListCtrl">
   	   <div class="cms-recipeTitleList">
           <ul>
               <li
                ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
                ng-class="{selectedMeal:meals[$index].selected}">
-              <a href="" ng-click="viewMealDetail(meal.id); selectThisMeal($index)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
+              <a href="" ng-click="viewMealDetail($index); selectThisMeal($index)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
               </li>
           </ul>
         </div><!-- closes mealsScrollList"-->
@@ -19,7 +19,7 @@
         <div class="cms-recipeEditContainer">
 
         <div class="cms-recipeEdit">
-          <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">EXPORT DATA</button>
+          <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">SAVE TO DATABASE</button>
           </br>
           <b>Meal Name:</b><input ng-model="mealDetail.title"/>
           </br>

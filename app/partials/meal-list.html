@@ -7,14 +7,14 @@
       </p>
   </div>
 
-  <div class="wrapper">
+  <div class="wrapper" ng-controller="MealListCtrl">
     <aside class="mealsSnippetContainer">
           <div class="scrollListLabels">
             <p class="mealsTitle">MEALS</p>
             <p class="prepTimeTitle">PREP TIME</p>
           </div><!-- closes scrollListLabels-->
 
-          <div class="mealsScrollList" ng-controller="MealListCtrl">
+          <div class="mealsScrollList">
             <ul>
               <li 
                 ng-click="viewMealDetail($index); selectThisMeal($index)"

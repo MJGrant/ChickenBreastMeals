@@ -69,6 +69,7 @@ cbmAppControllers.controller('MealListCtrl', ['$scope', '$http', function($scope
 cbmAppControllers.controller('AdminMealListCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.getMeals();
 	$scope.viewMealDetail = function(index) {
+		console.log("Calling viewMealDetail " + index);
 		$scope.mealDetail = $scope.meals[index];
 	};
 
