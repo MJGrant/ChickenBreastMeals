@@ -48,17 +48,13 @@ cbmAppControllers.controller('MasterCtrl', function($scope, $http) {
 });
 
 cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
-	$scope.editMode = false;
-	console.log("initializing editmode: ", $scope.editMode);
-
+	$scope.creatingNewMeal = false;
+	console.log("initializing creatingNewMeal variable: ", $scope.creatingNewMeal);
 	$scope.postMeal = function(mealDetail) {
-		console.log("editMode check #2: ", $scope.editMode);
-		//console.log("mealDetail title: " + mealDetail.title);
-		if ($scope.editMode == true) {
-			$scope.editMeal(mealDetail);
-			$scope.editMode = false;
-		} else {
-			console.log("ELSE! $scope.editMode = ", $scope.editMode);
+		if ($scope.creatingNewMeal === false) {
+			$scope.editMeal(mealDetail); //we're editing an existing, so just edit that meal
+		} else { //we're making (posting) a brand new meal
+			console.log("$scope.creatingNewMeal = ", $scope.creatingNewMeal);
 			if (!mealDetail.dietary) {
 					mealDetail.dietary = {
 					dairyfree:false,
@@ -67,21 +63,29 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 					};
 				}
 			$scope.createNewMeal(mealDetail);
+			$scope.creatingNewMeal = false; //we're no longer creating a new meal, because it now exists
 		}
 	};
 
 	$scope.deleteMeal = function(mealDetail) {
 		console.log("DELETED!");
 		$scope.deleteExistingMeal(mealDetail);
-	};
-
 		$scope.getMeals();
+	};
 
 	$scope.viewMealDetail = function(index) {
 		console.log("Calling viewMealDetail " + index);
 		$scope.mealDetail = $scope.meals[index];
-		$scope.editMode = true;
-		console.log("editMode check #1: ", $scope.editMode);
+		console.log("creatingNewMeal check #1: ", $scope.creatingNewMeal);
+	};
+
+	$scope.selectCreateNewMeal = function() {
+		console.log("Clicked 'create new meal' in list");
+		$scope.creatingNewMeal = true;
+		$scope.mealDetail = {};
+		$scope.mealDetail.ingredients = [];
+		$scope.mealDetail.instructions = [];
+		//add blank arrays and objects when creating a new meal
 	};
 
 	$scope.selectThisMeal = function(id) {

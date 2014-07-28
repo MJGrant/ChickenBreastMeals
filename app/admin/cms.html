@@ -13,6 +13,7 @@
                ng-class="{selectedMeal:meals[$index].selected}">
               <a href="" ng-click="viewMealDetail($index); selectThisMeal($index)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
               </li>
+              <a href="" ng-click="selectCreateNewMeal()">[Create new meal]</a>
           </ul>
         </div><!-- closes mealsScrollList"-->
 
@@ -61,8 +62,8 @@
           </br>
           <b>Ingredients:</b>
           <ol>
-            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="ingredient"></li>
-            <li><input ng-model="newIngredient"><a href="" ng-click="mealDetail.ingredients.push(newIngredient)">ADD</a></li>
+            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="mealDetail.ingredients[$index]"></li>
+            <li><input ng-model="newIngredient"><a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient=''">ADD</a></li>
           </ol>
 
           <b>Recipe Steps:</b>
