@@ -18,7 +18,7 @@
             <ul>
               <li 
                 ng-click="viewMealDetail($index); selectThisMeal($index)"
-                ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+                ng-repeat="meal in meals | filter: query" 
                 ng-class="{selectedMeal:meals[$index].selected}"
                 class="mealPreviewButton" 
                 >
@@ -58,7 +58,7 @@
           <h2>You Will Need</h2>
             <ul>
             <li ng-repeat="ingredient in mealDetail.ingredients">
-              {{ingredient}}
+              {{ingredient.name}}
             </li>
             </ul>
           <h2>Step by Step Instructions</h2>

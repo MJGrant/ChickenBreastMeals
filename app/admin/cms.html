@@ -9,7 +9,7 @@
   	   <div class="cms-recipeTitleList">
           <ul>
               <li
-               ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+               ng-repeat="meal in meals | filter: query" 
                ng-class="{selectedMeal:meals[$index].selected}">
               <a href="" ng-click="viewMealDetail($index); selectThisMeal($index)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
               </li>
@@ -62,8 +62,8 @@
           </br>
           <b>Ingredients:</b>
           <ol>
-            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="mealDetail.ingredients[$index]"></li>
-            <li><input ng-model="newIngredient"><a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient=''">ADD</a></li>
+            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="mealDetail.ingredients[$index].name"></li>
+            <li><input ng-model="newIngredient.name"><a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD</a></li>
           </ol>
 
           <b>Recipe Steps:</b>

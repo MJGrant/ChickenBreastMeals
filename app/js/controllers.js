@@ -52,16 +52,18 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 	console.log("initializing creatingNewMeal variable: ", $scope.creatingNewMeal);
 	$scope.postMeal = function(mealDetail) {
 		if ($scope.creatingNewMeal === false) {
+			console.log("$scope.creatingNewMeal is expected FALSE. Is: " + $scope.creatingNewMeal);
 			$scope.editMeal(mealDetail); //we're editing an existing, so just edit that meal
 		} else { //we're making (posting) a brand new meal
 			console.log("$scope.creatingNewMeal = ", $scope.creatingNewMeal);
-			if (!mealDetail.dietary) {
-					mealDetail.dietary = {
-					dairyfree:false,
-					glutenfree:false,
-					lowcarb:false
-					};
-				}
+			mealDetail.dietary = {
+				dairyfree:false,
+				glutenfree:false,
+				lowcarb:false
+			};
+			$scope.mealDetail.ingredients = [];
+			$scope.mealDetail.instructions = [];
+			//todo: add blank arrays and objects when creating a new meal
 			$scope.createNewMeal(mealDetail);
 			$scope.creatingNewMeal = false; //we're no longer creating a new meal, because it now exists
 		}
@@ -76,16 +78,13 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 	$scope.viewMealDetail = function(index) {
 		console.log("Calling viewMealDetail " + index);
 		$scope.mealDetail = $scope.meals[index];
-		console.log("creatingNewMeal check #1: ", $scope.creatingNewMeal);
+		console.log("$scope.creatingNewMeal is expected false: ", $scope.creatingNewMeal);
 	};
 
 	$scope.selectCreateNewMeal = function() {
-		console.log("Clicked 'create new meal' in list");
+		$scope.mealDetail = {}; //sets everything in the form to empty
 		$scope.creatingNewMeal = true;
-		$scope.mealDetail = {};
-		$scope.mealDetail.ingredients = [];
-		$scope.mealDetail.instructions = [];
-		//add blank arrays and objects when creating a new meal
+		console.log("Clicked 'create new meal' in list, set creatingNewMeal to true. Confirm: ", $scope.creatingNewMeal);
 	};
 
 	$scope.selectThisMeal = function(id) {
