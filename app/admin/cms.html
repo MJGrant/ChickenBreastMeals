@@ -4,7 +4,8 @@
             <p>Total meals in data: {{meals.length}}</p>
 	   </header>
 
-     <div class="cms-wrapper" ng-controller="AdminMealListCtrl">
+     <!-- meal navigator on left -->
+     <div class="cms-wrapper">
   	   <div class="cms-recipeTitleList">
           <ul>
               <li
@@ -18,31 +19,46 @@
 
         <div class="cms-recipeEditContainer">
 
+        <!--meal details on right-->
         <div class="cms-recipeEdit">
           <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">SAVE TO DATABASE</button>
           </br>
-          <b>Meal Name:</b><input ng-model="mealDetail.title"/>
-          </br>
-          <b>Meal ID: {{mealDetail.id}}</b>
-          </br>
-          <b>Snippet</b>
-          <b>Description</b>
 
+          <b>Meal Name:</b>
+          </br>
+          <input ng-model="mealDetail.title"/>
+          </br>
+
+          <b>Snippet</b>
+          </br>
+          <input ng-model="mealDetail.snippet"/>
+          </br>
+
+          <b>Description</b>
+          </br>
+          <input ng-model="mealDetail.description"/>
+          </br>
+
+          <b>Dietary</b>
           <div class="cms-checkboxes">
-          <input type="checkbox" name="dietary" value="noGluten">Gluten free<br>
-          <input type="checkbox" name="dietary" value="noDairy">Dairy free<br>
-          <input type="checkbox" name="dietary" value="lowCarb">Low carb<br>
+          <input type="checkbox" name="dietary" value="noGluten" ng-model="mealDetail.dietary.glutenfree">Gluten free<br>
+          <input type="checkbox" name="dietary" value="noDairy" ng-model="mealDetail.dietary.dairyfree">Dairy free<br>
+          <input type="checkbox" name="dietary" value="lowCarb" ng-model="mealDetail.dietary.lowcarb">Low carb<br>
           </div>
 
-          <b>Prep time:</b><input ng-model="mealDetail.preptime">
+          <b>Prep time:</b>
+          <input ng-model="mealDetail.preptime">
           </br>
 
-          <b>Cook time:</b><input ng-model="mealDetail.cooktime">
+          <b>Cook time:</b>
+          <input ng-model="mealDetail.cooktime">
           </br>
 
-          <b>Oven temp:</b><input ng-model="mealDetail.cooktemp">
+          <b>Oven temp:</b>
+          <input ng-model="mealDetail.oventemp">
           </br>
-        </br>
+          
+          </br>
           <b>Ingredients:</b>
           <ol>
             <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="ingredient"></li>
