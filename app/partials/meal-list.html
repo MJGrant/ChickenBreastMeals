@@ -19,7 +19,7 @@
               <li 
                 ng-click="viewMealDetail(meal); selectThisMeal(meal)"
                 ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
-                ng-class="{selectedMeal:meals[$index].selected}"
+                ng-class="{selectedMeal:meal.selected}"
                 class="mealPreviewButton" 
                 >
                 <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
