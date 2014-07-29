@@ -17,8 +17,8 @@
           <div class="mealsScrollList">
             <ul>
               <li 
-                ng-click="viewMealDetail($index); selectThisMeal($index)"
-                ng-repeat="meal in meals | filter: query" 
+                ng-click="viewMealDetail(meal); selectThisMeal(meal)"
+                ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
                 ng-class="{selectedMeal:meals[$index].selected}"
                 class="mealPreviewButton" 
                 >

@@ -75,9 +75,9 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 		$scope.getMeals();
 	};
 
-	$scope.viewMealDetail = function(index) {
-		console.log("Calling viewMealDetail " + index);
-		$scope.mealDetail = $scope.meals[index];
+	$scope.viewMealDetail = function(meal) {
+		console.log("Calling viewMealDetail " + meal.title);
+		$scope.mealDetail = $scope.meals[$scope.meals.indexOf(meal)];
 		console.log("$scope.creatingNewMeal is expected false: ", $scope.creatingNewMeal);
 	};
 
@@ -87,11 +87,11 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 		console.log("Clicked 'create new meal' in list, set creatingNewMeal to true. Confirm: ", $scope.creatingNewMeal);
 	};
 
-	$scope.selectThisMeal = function(id) {
+	$scope.selectThisMeal = function(meal) {
 		$scope.meals.forEach(function(mealIndex) {
 			mealIndex.selected=false;
 		});
-		$scope.meals[id].selected=true;
+		$scope.meals[$scope.meals.indexOf(meal)].selected=true;
 	};
 
 	$scope.siteName = "Chicken Breast Meals.com";
@@ -100,15 +100,16 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 
 cbmAppControllers.controller('MealListCtrl', ['$scope', '$http', function($scope, $http) {
 	$scope.getMeals();
-	$scope.viewMealDetail = function(index) {
-		$scope.mealDetail = $scope.meals[index];
+	$scope.viewMealDetail = function(meal) {
+		console.log("Viewing meal detail");
+		$scope.mealDetail = $scope.meals[$scope.meals.indexOf(meal)];
 	};
 
-	$scope.selectThisMeal = function(id) {
+	$scope.selectThisMeal = function(meal) {
 		$scope.meals.forEach(function(mealIndex) {
 			mealIndex.selected=false;
 		});
-		$scope.meals[id].selected=true;
+		$scope.meals[$scope.meals.indexOf(meal)].selected=true;
 	};
 
 	$scope.siteName = "Chicken Breast Meals.com";
