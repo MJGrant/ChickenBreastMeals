@@ -63,6 +63,7 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 			};
 			$scope.mealDetail.ingredients = [];
 			$scope.mealDetail.instructions = [];
+            $scope.mealDetail.images = [];
 			//todo: add blank arrays and objects when creating a new meal
 			$scope.createNewMeal(mealDetail);
 			$scope.creatingNewMeal = false; //we're no longer creating a new meal, because it now exists

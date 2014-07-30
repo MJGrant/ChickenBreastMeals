@@ -9,7 +9,7 @@
   	   <div class="cms-recipeTitleList">
           <ul>
               <li
-               ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
+               ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
                ng-class="{selectedMeal:meals[$index].selected}">
               <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
               </li>
@@ -62,7 +62,11 @@
           <br>
           <b>Ingredients:</b>
           <ol>
-            <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="mealDetail.ingredients[$index].name"></li>
+            <li ng-repeat="ingredient in mealDetail.ingredients">
+                <input ng-model="mealDetail.ingredients[$index].name">
+                <a href="" ng-click="mealDetail.ingredients.pop($index)">[X]</a>
+            </li>
+
             <li>
                 <input ng-model="newIngredient.name">
                 <a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD</a>
@@ -72,20 +76,25 @@
           <b>Recipe Steps:</b>
           <ol class="cms-recipeInstructionSteps">
             <li ng-repeat="instruction in mealDetail.instructions">
-                <textarea ng-model="mealDetail.instructions[$index].name"></textarea></li>
-            <li><textarea ng-model="newInstruction.name"></textarea><a href="" ng-click="mealDetail.instructions.push(newInstruction); newInstruction={name:''}">ADD</a>
+                <textarea ng-model="mealDetail.instructions[$index].name"></textarea>
+            </li>
+
+            <li>
+                <textarea ng-model="newInstruction.name"></textarea>
+                <a href="" ng-click="mealDetail.instructions.push(newInstruction); newInstruction={name:''}">ADD</a>
             </li>
           </ol>
 
           <h2>Photos</h2>
           <span ng-repeat="image in mealDetail.images">
-            <p><b>Image {{$index + 1}}:</b></p>
+            <b>Image {{$index + 1}}:</b>
             <input ng-model="mealDetail.images[$index].path">
             <br>
             <img ng-src="{{image}}" id="mealAdditionalImg">
           </span>
           <br>
-          <input ng-model="newImagePath"><a href="" ng-click="mealDetail.images.push(newImagePath); newImage={path:''}">ADD IMAGE</a>
+            <input ng-model="newImagePath.path">
+            <a href="" ng-click="mealDetail.images.push(newImagePath); newImage={path:''}">ADD IMAGE</a>
           <br>
 
         </div>
