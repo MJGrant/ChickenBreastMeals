@@ -11,7 +11,8 @@
               <li
                ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
                ng-class="{selectedMeal:meals[$index].selected}">
-              <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a><a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
+              <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a>
+                  <a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
               </li>
               <a href="" ng-click="selectCreateNewMeal()">[Create new meal]</a>
           </ul>
@@ -28,16 +29,19 @@
           <b>Meal Name:</b>
           <br>
           <input ng-model="mealDetail.title"/>
+            <a href="" ng-click="mealDetail.title = ''">Clear</a>
           <br>
 
           <b>Snippet</b>
           <br>
           <input ng-model="mealDetail.snippet"/>
+            <a href="" ng-click="mealDetail.snippet = ''">Clear</a>
           <br>
 
           <b>Description</b>
           <br>
           <input ng-model="mealDetail.description"/>
+            <a href="" ng-click="mealDetail.description = ''">Clear</a>
           <br>
 
           <b>Dietary</b>
@@ -77,6 +81,7 @@
           <ol class="cms-recipeInstructionSteps">
             <li ng-repeat="instruction in mealDetail.instructions">
                 <textarea ng-model="mealDetail.instructions[$index].name"></textarea>
+                <a href="" ng-click="mealDetail.instructions.pop($index)">[X]</a>
             </li>
 
             <li>
