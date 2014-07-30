@@ -76,9 +76,9 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 	};
 
 	$scope.viewMealDetail = function(meal) {
-		console.log("Calling viewMealDetail " + meal.title);
-		$scope.mealDetail = $scope.meals[$scope.meals.indexOf(meal)];
-		console.log("$scope.creatingNewMeal is expected false: ", $scope.creatingNewMeal);
+        console.log("Calling viewMealDetail " + meal.title);
+        $scope.mealDetail = $scope.meals[$scope.meals.indexOf(meal)];
+        console.log("$scope.creatingNewMeal is expected false: ", $scope.creatingNewMeal);
 	};
 
 	$scope.selectCreateNewMeal = function() {
@@ -115,22 +115,3 @@ cbmAppControllers.controller('MealListCtrl', ['$scope', '$http', function($scope
 	$scope.siteName = "Chicken Breast Meals.com";
 	$scope.orderProp = 'cooktime';
 }]);
-
-/*
-cbmAppControllers.controller('MealListCtrl', ['$scope', '$http', function($scope, $http) {
-	$scope.getMeals();
-	$scope.viewMealDetail = function(index) {
-		$scope.mealDetail = $scope.meals[index];
-	};
-
-	$scope.selectThisMeal = function(id) {
-		$scope.meals.forEach(function(mealIndex) {
-			mealIndex.selected=false;
-		});
-		$scope.meals[id].selected=true;
-	};
-
-	$scope.siteName = "Chicken Breast Meals.com";
-	$scope.orderProp = 'cooktime';
-}]);
-*/

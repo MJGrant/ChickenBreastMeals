@@ -23,22 +23,22 @@
         <!--meal details on right-->
         <div class="cms-recipeEdit">
           <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">SAVE TO DATABASE</button>
-          </br>
+          <br>
 
           <b>Meal Name:</b>
-          </br>
+          <br>
           <input ng-model="mealDetail.title"/>
-          </br>
+          <br>
 
           <b>Snippet</b>
-          </br>
+          <br>
           <input ng-model="mealDetail.snippet"/>
-          </br>
+          <br>
 
           <b>Description</b>
-          </br>
+          <br>
           <input ng-model="mealDetail.description"/>
-          </br>
+          <br>
 
           <b>Dietary</b>
           <div class="cms-checkboxes">
@@ -49,40 +49,44 @@
 
           <b>Prep time:</b>
           <input ng-model="mealDetail.preptime">
-          </br>
+          <br>
 
           <b>Cook time:</b>
           <input ng-model="mealDetail.cooktime">
-          </br>
+          <br>
 
           <b>Oven temp:</b>
           <input ng-model="mealDetail.oventemp">
-          </br>
+          <br>
           
-          </br>
+          <br>
           <b>Ingredients:</b>
           <ol>
             <li ng-repeat="ingredient in mealDetail.ingredients"><input ng-model="mealDetail.ingredients[$index].name"></li>
-            <li><input ng-model="newIngredient.name"><a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD</a></li>
+            <li>
+                <input ng-model="newIngredient.name">
+                <a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD</a>
+            </li>
           </ol>
 
           <b>Recipe Steps:</b>
           <ol class="cms-recipeInstructionSteps">
-            <li ng-repeat="instruction in mealDetail.instructions"><textarea ng-model="instruction"></textarea></li>
-            <li><textarea ng-model="newInstruction"></textarea><a href="" ng-click="mealDetail.instructions.push(newInstruction)">ADD</a>
+            <li ng-repeat="instruction in mealDetail.instructions">
+                <textarea ng-model="mealDetail.instructions[$index].name"></textarea></li>
+            <li><textarea ng-model="newInstruction.name"></textarea><a href="" ng-click="mealDetail.instructions.push(newInstruction); newInstruction={name:''}">ADD</a>
             </li>
           </ol>
 
           <h2>Photos</h2>
           <span ng-repeat="image in mealDetail.images">
             <p><b>Image {{$index + 1}}:</b></p>
-            <input ng-model="mealDetail.images[$index]">
+            <input ng-model="mealDetail.images[$index].path">
             <br>
             <img ng-src="{{image}}" id="mealAdditionalImg">
           </span>
-          </br>
-          <input ng-model="newImagePath"><a href="" ng-click="mealDetail.images.push(newImagePath)">ADD IMAGE</a>
-          </br>
+          <br>
+          <input ng-model="newImagePath"><a href="" ng-click="mealDetail.images.push(newImagePath); newImage={path:''}">ADD IMAGE</a>
+          <br>
 
         </div>
 
