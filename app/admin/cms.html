@@ -1,111 +1,125 @@
-  <div ng-controller="AdminCtrl">
-		<header>
-			<h1>Edit Chicken Breast Meals Recipe Data</h1>
-            <p>Total meals in data: {{meals.length}}</p>
-	   </header>
+<div ng-controller="AdminCtrl">
+    <header>
+        <h1>Edit Chicken Breast Meals Recipe Data</h1>
+        <p>Total meals in data: {{meals.length}}</p>
+    </header>
 
-     <!-- meal navigator on left -->
-     <div class="cms-wrapper">
-  	   <div class="cms-recipeTitleList">
-          <ul>
-              <li
-               ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
-               ng-class="{selectedMeal:meals[$index].selected}">
-              <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a>
-                  <a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
-              </li>
-              <a href="" ng-click="selectCreateNewMeal()">[Create new meal]</a>
-          </ul>
+    <!-- meal navigator on left -->
+    <div class="cms-wrapper">
+        <div class="cms-recipeTitleList">
+            <ul>
+                <li
+                        ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
+                        ng-class="{selectedMeal:meals[$index].selected}">
+                    <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a>
+                    <a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
+                </li>
+                <a href="" ng-click="selectCreateNewMeal()">[Create new meal]</a>
+            </ul>
         </div><!-- closes mealsScrollList"-->
 
 
         <div class="cms-recipeEditContainer">
 
-        <!--meal details on right-->
-        <div class="cms-recipeEdit">
-          <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">SAVE TO DATABASE</button>
-          <br>
+            <!--meal details on right-->
+            <div class="cms-recipeEdit">
+                <h2>EDIT MODE: {{mealDetail.title}}</h2><button ng-click="postMeal(mealDetail)">SAVE TO DATABASE</button>
+                <br>
 
-          <b>Meal Name:</b>
-          <br>
-          <input ng-model="mealDetail.title"/>
-            <a href="" ng-click="mealDetail.title = ''">Clear</a>
-          <br>
+                <b>Meal Name:</b>
+                <br>
+                <input ng-model="mealDetail.title"/>
+                <a href="" ng-click="mealDetail.title = ''">Clear</a>
+                <br>
 
-          <b>Snippet</b>
-          <br>
-          <input ng-model="mealDetail.snippet"/>
-            <a href="" ng-click="mealDetail.snippet = ''">Clear</a>
-          <br>
+                <b>Snippet</b>
+                <br>
+                <input ng-model="mealDetail.snippet"/>
+                <a href="" ng-click="mealDetail.snippet = ''">Clear</a>
+                <br>
 
-          <b>Description</b>
-          <br>
-          <input ng-model="mealDetail.description"/>
-            <a href="" ng-click="mealDetail.description = ''">Clear</a>
-          <br>
+                <b>Description</b>
+                <br>
+                <input ng-model="mealDetail.description"/>
+                <a href="" ng-click="mealDetail.description = ''">Clear</a>
+                <br>
 
-          <b>Dietary</b>
-          <div class="cms-checkboxes">
-          <input type="checkbox" name="dietary" value="noGluten" ng-model="mealDetail.dietary.glutenfree">Gluten free<br>
-          <input type="checkbox" name="dietary" value="noDairy" ng-model="mealDetail.dietary.dairyfree">Dairy free<br>
-          <input type="checkbox" name="dietary" value="lowCarb" ng-model="mealDetail.dietary.lowcarb">Low carb<br>
-          </div>
+                <b>Dietary</b>
+                <div class="cms-checkboxes">
+                    <input type="checkbox" name="dietary" value="noGluten" ng-model="mealDetail.dietary.glutenfree">Gluten free<br>
+                    <input type="checkbox" name="dietary" value="noDairy" ng-model="mealDetail.dietary.dairyfree">Dairy free<br>
+                    <input type="checkbox" name="dietary" value="lowCarb" ng-model="mealDetail.dietary.lowcarb">Low carb<br>
+                </div>
 
-          <b>Prep time:</b>
-          <input ng-model="mealDetail.preptime">
-          <br>
 
-          <b>Cook time:</b>
-          <input ng-model="mealDetail.cooktime">
-          <br>
+                <div class="shortInput">
+                    <b>Prep time:</b>
+                    <input ng-model="mealDetail.preptime">minutes
+                    <br>
 
-          <b>Oven temp:</b>
-          <input ng-model="mealDetail.oventemp">
-          <br>
-          
-          <br>
-          <b>Ingredients:</b>
-          <ol>
-            <li ng-repeat="ingredient in mealDetail.ingredients">
-                <input ng-model="mealDetail.ingredients[$index].name">
-                <a href="" ng-click="mealDetail.ingredients.pop($index)">[X]</a>
-            </li>
+                    <b>Cook time:</b>
+                    <input ng-model="mealDetail.cooktime">minutes
+                    <br>
 
-            <li>
-                <input ng-model="newIngredient.name">
-                <a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD</a>
-            </li>
-          </ol>
+                    <b>Oven temp:</b>
+                    <input ng-model="mealDetail.oventemp">degrees
+                    <br>
+                </div>
 
-          <b>Recipe Steps:</b>
-          <ol class="cms-recipeInstructionSteps">
-            <li ng-repeat="instruction in mealDetail.instructions">
-                <textarea ng-model="mealDetail.instructions[$index].name"></textarea>
-                <a href="" ng-click="mealDetail.instructions.pop($index)">[X]</a>
-            </li>
 
-            <li>
-                <textarea ng-model="newInstruction.name"></textarea>
-                <a href="" ng-click="mealDetail.instructions.push(newInstruction); newInstruction={name:''}">ADD</a>
-            </li>
-          </ol>
+                <br>
+                <b>Ingredients</b>
+                <ol>
+                    <li ng-repeat="ingredient in mealDetail.ingredients">
+                        <input ng-model="mealDetail.ingredients[$index].name">
+                        <a href="" ng-click="mealDetail.ingredients.pop($index)">[X]</a>
+                    </li>
 
-          <h2>Photos</h2>
-          <span ng-repeat="image in mealDetail.images">
-            <b>Image {{$index + 1}}:</b>
-            <input ng-model="mealDetail.images[$index].path">
-            <br>
-            <img ng-src="{{image}}" id="mealAdditionalImg">
-          </span>
-          <br>
-            <input ng-model="newImagePath.path">
-            <a href="" ng-click="mealDetail.images.push(newImagePath); newImage={path:''}">ADD IMAGE</a>
-          <br>
+                    <li>
+                        <input ng-model="newIngredient.name">
+                        <a href="" ng-click="mealDetail.ingredients.push(newIngredient); newIngredient={name:''}">ADD INGREDIENT</a>
+                    </li>
+                </ol>
 
+                <b>Recipe Steps</b>
+                <ol class="cms-recipeInstructionSteps">
+                    <li ng-repeat="instruction in mealDetail.instructions">
+                        <textarea ng-model="mealDetail.instructions[$index].name"></textarea>
+                        <a href="" ng-click="mealDetail.instructions.pop($index)">[X]</a>
+                    </li>
+
+                    <li>
+                        <textarea ng-model="newInstruction.name"></textarea>
+                        <a href="" ng-click="mealDetail.instructions.push(newInstruction); newInstruction={name:''}">ADD STEP</a>
+                    </li>
+                </ol>
+
+                <h2>Photos</h2>
+                <ol>
+                    <!--display the existing images-->
+                    <li ng-repeat="image in mealDetail.images">
+                        <br>
+                        <b>Image {{$index + 1}}:</b>
+                        <img ng-src="{{image}}" id="mealAdditionalImg">
+                        <a href="" ng-click="mealDetail.images.pop($index)">[X]</a>
+                        {{image}}<!-- print the image's filepath-->
+                        <br>
+                        Change image:
+                        <input type="file" ng-model="newImage.path">
+                        <a href="" ng-click="mealDetail.images.splice($index,1,'images/meals/' + newImage); newImage={path:''}">CHANGE IMAGE</a>
+                    </li>
+
+                    <!--prompt for new image-->
+                    <li>
+                        <b>New Image:</b>
+                        <input type="file" ng-model="newImage.path">
+                        <a href="" ng-click="mealDetail.images.push('images/meals/' + newImage); newImage={path:''}">ADD IMAGE</a>
+                        <br>
+                    </li>
+                </ol>
+
+            </div>
         </div>
-
-        </div>
-      </div><!--closes cms-wrapper-->
-
-	 </div>
+    </div><!--closes cms-wrapper-->
+</div>
 </html>
