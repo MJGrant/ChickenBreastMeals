@@ -56,17 +56,18 @@
                 <p class="mealDescription">{{mealDetail.description}}</p>
 
             <span class="tagNames">
-            <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
+                <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
             </span>
 
-                <h2>You Will Need</h2>
-                <ul>
-                    <li ng-repeat="ingredient in mealDetail.ingredients">
-                        {{ingredient.name}}
+            <h2>{{mealDetail.ingredients.length}} Ingredients</h2>
+                <ul class="mealIngredientsList">
+                    <li ng-repeat="ingredient in mealDetail.ingredients" class="mealIngredient">
+                        <input type="checkbox"/> {{ingredient.name}}
                     </li>
                 </ul>
-                <h2>Step by Step Instructions</h2>
-                <ol>
+
+            <h2>Step by Step Instructions</h2>
+                <ol class="mealInstructionsList">
                     <li ng-repeat="instruction in mealDetail.instructions">
                         {{instruction.name}}
                     </li>
