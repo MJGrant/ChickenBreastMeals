@@ -64,41 +64,39 @@ ul, ol {
 /* Site Layout and Navigation
 /*********************/
 
+.scrollListLabels {
+    display: flex;
+    justify-content: space-around;
+    font-size:.8em;
+    display:block;
+    font-style:italic;
+}
+
 .wrapper {
   display: flex; 
   justify-content: space-around; 
 }
 
 .userSortSettings {
-    padding:5px;
     background:white;
+    text-align:center;
+    vertical-align:middle;
     border-bottom:1px #ddd solid;
     margin-bottom:14px;
-    overflow:hidden;
+    height:60px;
 }
 
 .filterButton{
     color:red;
 }
-
-.scrollListLabels {
-  display: flex; 
-  justify-content: space-around;
-  font-size:.8em;
-  display:block;
-  font-style:italic;
-}
-
 .searchbox {
     border:1px solid #ddd;
     border-radius:20px;
     height:30px;
     width:380px;
     background-color:white;
-    position:relative;
     outline:none;
-    margin-top:5px;
-    margin-left:26px;
+    position:relative;
     display:inline-block;
 }
 
@@ -106,49 +104,57 @@ ul, ol {
     background:0 0;
     border:0 none;
     width:320px;
-    top:5px;
     left:40px;
     position:absolute;
     outline:none;
 }
 
-.filters{
-    height:30px;
+/*********************
+/* mealOptions Filters
+/*********************/
+
+.filters {
     width:600px;
-    margin-top:5px;
     margin-left:26px;
     display:inline-block;
 }
 
-.filterNav {
+.filterNav li {
     list-style:none;
+    font-size:.85em;
+    cursor:pointer;
+    display:inline;
+    padding:4px 6px 6px 8px;
+    margin-right:5px;
+    background-color:#f1f1f1;
+    border-radius:3px;
+    text-transform:uppercase;
+    text-align:center;
 }
 
-.filterNav li {
-    display:inline;
-    padding:5px;
-    margin-right:5px;
-    background-color:#ddd;
-    text-transform:uppercase;
+.filterNav li:hover {
+    background-color:red;
 }
 
 
 .navMenu {
-  list-style: none;
-  font-size:1.1em;
-  text-transform:uppercase;
-  padding-left:0px;
-  height:70px;
-  display:table;
+    list-style: none;
+    font-size:1em;
+    text-transform:uppercase;
+    height:70px;
+    display:table;
 }
 
 .navMenu li a { 
-  padding:4px;
-  border-radius:4px;
+    padding:4px;
+    border-radius:4px;
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 .navMenu > li {
-  display: table-cell; 
+  display: table-cell;
   vertical-align:middle;
   padding-right:.8em;
   padding-top:10px;
