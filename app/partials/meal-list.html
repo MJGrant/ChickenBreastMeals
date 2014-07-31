@@ -1,17 +1,19 @@
 <div ng-controller="MealListCtrl">
     <div class="userSortSettings">
+
         <div class="searchbox">
             <input ng-model="query" class="searchInput" placeholder="Search by ingredient or recipe name"/>
         </div>
+
         <div class="filters">Only show:
             <ul class="filterNav">
-                <li
-                    ng-repeat="option in mealOptions" class="filterButton">
-                        <p>Thing</p>
+                <li>
+                    <!-- ng-repeat="option in mealOptions" class="filterButton">-->
+                   Button
                 </li>
             </ul>
         </div>
-    </div>
+    </div><!--closes userSortSettings-->
 
     <div class="wrapper">
         <aside class="mealsSnippetContainer">

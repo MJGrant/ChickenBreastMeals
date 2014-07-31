@@ -74,6 +74,7 @@ ul, ol {
     background:white;
     border-bottom:1px #ddd solid;
     margin-bottom:14px;
+    overflow:hidden;
 }
 
 .filterButton{
@@ -98,6 +99,7 @@ ul, ol {
     outline:none;
     margin-top:5px;
     margin-left:26px;
+    display:inline-block;
 }
 
 .searchInput {
@@ -110,19 +112,12 @@ ul, ol {
     outline:none;
 }
 
-
-.sortBy {
-  float:left;
-  margin:0 auto;
-  padding-left:10px;
-}
-
 .filters{
-    float:right;
     border:1px solid red;
     width:500px;
     display:block;
     top:1px;
+    display:inline-block;
 }
 
 .filterNav {
