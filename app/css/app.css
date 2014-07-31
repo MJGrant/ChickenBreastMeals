@@ -79,34 +79,25 @@ ul, ol {
 
 .userSortSettings {
     background:white;
-    text-align:center;
-    vertical-align:middle;
     border-bottom:1px #ddd solid;
     margin-bottom:14px;
-    height:60px;
+    height:50px;
+    text-align:center;
 }
 
 .filterButton{
     color:red;
 }
-.searchbox {
+.searchInput {
     border:1px solid #ddd;
     border-radius:20px;
     height:30px;
     width:380px;
     background-color:white;
     outline:none;
-    position:relative;
-    display:inline-block;
-}
-
-.searchInput {
-    background:0 0;
-    border:0 none;
-    width:320px;
+    padding-left:12px;
     left:40px;
-    position:absolute;
-    outline:none;
+    margin-top:8px;
 }
 
 /*********************
