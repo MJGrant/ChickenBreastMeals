@@ -104,16 +104,17 @@
                         <a href="" ng-click="mealDetail.images.pop($index)">[X]</a>
                         {{image}}<!-- print the image's filepath-->
                         <br>
-                        Change image:
+                        <!--Change image:
                         <input type="file" ng-model="newImage.path">
                         <a href="" ng-click="mealDetail.images.splice($index,1,'images/meals/' + newImage); newImage={path:''}">CHANGE IMAGE</a>
+                        -->
                     </li>
 
                     <!--prompt for new image-->
                     <li>
                         <b>New Image:</b>
-                        <input type="file" ng-model="newImage.path">
-                        <a href="" ng-click="mealDetail.images.push('images/meals/' + newImage); newImage={path:''}">ADD IMAGE</a>
+                        <input type="file" fileread="newImage">
+                        <a href="" ng-click="mealDetail.images.push('/images/meals/' + newImage.name); newImage={name:''}">ADD IMAGE</a>
                         <br>
                     </li>
                 </ol>
