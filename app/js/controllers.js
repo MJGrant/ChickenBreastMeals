@@ -71,10 +71,13 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 			$scope.editMeal(mealDetail); //we're editing an existing, so just edit that meal
 		} else { //we're making (posting) a brand new meal
 			console.log("$scope.creatingNewMeal = ", $scope.creatingNewMeal);
-			mealDetail.dietary = {
+			mealDetail.mealOptions = {
 				dairyfree:false,
 				glutenfree:false,
-				lowcarb:false
+				lowcarb:false,
+                lowfat:false,
+                paleo:false,
+                quick:false
 			};
 			$scope.mealDetail.ingredients = [];
 			$scope.mealDetail.instructions = [];

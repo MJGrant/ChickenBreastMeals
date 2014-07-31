@@ -44,11 +44,14 @@
                 <a href="" ng-click="mealDetail.description = ''">Clear</a>
                 <br>
 
-                <b>Dietary</b>
+                <b>Dietary Options</b>
                 <div class="cms-checkboxes">
-                    <input type="checkbox" name="dietary" value="noGluten" ng-model="mealDetail.dietary.glutenfree">Gluten free<br>
-                    <input type="checkbox" name="dietary" value="noDairy" ng-model="mealDetail.dietary.dairyfree">Dairy free<br>
-                    <input type="checkbox" name="dietary" value="lowCarb" ng-model="mealDetail.dietary.lowcarb">Low carb<br>
+                    <input type="checkbox" name="mealOptions" value="noGluten" ng-model="mealDetail.mealOptions.glutenfree">Gluten free<br>
+                    <input type="checkbox" name="mealOptions" value="noDairy" ng-model="mealDetail.mealOptions.dairyfree">Dairy free<br>
+                    <input type="checkbox" name="mealOptions" value="lowCarb" ng-model="mealDetail.mealOptions.lowcarb">Low carb<br>
+                    <input type="checkbox" name="mealOptions" value="lowFat" ng-model="mealDetail.mealOptions.lowfat">Low fat<br>
+                    <input type="checkbox" name="mealOptions" value="paleo" ng-model="mealDetail.mealOptions.paleo">Paleo<br>
+                    <input type="checkbox" name="mealOptions" value="quick" ng-model="mealDetail.mealOptions.quick">Quick<br>
                 </div>
 
 
@@ -114,7 +117,7 @@
                     <li>
                         <b>New Image:</b>
                         <input type="file" fileread="newImage">
-                        <a href="" ng-click="mealDetail.images.push('/images/meals/' + newImage.name); newImage={name:''}">ADD IMAGE</a>
+                        <a href="" ng-click="mealDetail.images.push('/images/meals/' + newImage.name); fileread={name:''}">ADD IMAGE</a>
                         <br>
                     </li>
                 </ol>

@@ -23,7 +23,7 @@ var db = mongoose.model('Meals', {
 	ingredients:[],
 	instructions:[],
 	images:[],
-	dietary:{dairyfree: Boolean, glutenfree: Boolean, lowcarb: Boolean}
+    mealOptions:{dairyfree: Boolean, glutenfree: Boolean, lowcarb: Boolean, lowfat: Boolean, paleo: Boolean, quick: Boolean}
 });
 
 app.route('/api/db/')
@@ -49,10 +49,13 @@ app.route('/api/db/')
 			ingredients:m.ingredients,
 			instructions:m.instructions,
 			images:m.images,
-			dietary:{
-				dairyfree:m.dietary.dairyfree,
-				glutenfree:m.dietary.glutenfree,
-				lowcarb:m.dietary.lowcarb
+            mealOptions:{
+				dairyfree:m.mealOptions.dairyfree,
+				glutenfree:m.mealOptions.glutenfree,
+				lowcarb:m.mealOptions.lowcarb,
+                lowfat:m.mealOptions.lowfat,
+                paleo:m.mealOptions.paleo,
+                quick:m.mealOptions.quick
 			}
 		},function(err,newMeal) {
 			if (err) {
@@ -100,10 +103,13 @@ app.route('/api/db/:meal_id')
 			meal.ingredients = m.ingredients;
 			meal.instructions = m.instructions;
 			meal.images = m.images;
-			meal.dietary = {
-				dairyfree:m.dietary.dairyfree,
-				glutenfree:m.dietary.glutenfree,
-				lowcarb:m.dietary.lowcarb
+			meal.mealOptions = {
+				dairyfree:m.mealOptions.dairyfree,
+				glutenfree:m.mealOptions.glutenfree,
+				lowcarb:m.mealOptions.lowcarb,
+                lowfat:m.mealOptions.lowfat,
+                paleo:m.mealOptions.paleo,
+                quick:m.mealOptions.quick
 			};
 
 			meal.save(function(err) {

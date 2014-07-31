@@ -1,78 +1,82 @@
- <div class="userSortSettings">
-    <p>Search: <input ng-model="query"> &nbsp&nbsp&nbsp Sort by: &nbsp
-        <select ng-model="orderProp">
-          <option value="title">Alphabetical by Name</option>
-          <option value="cooktime">Shortest Prep Time</option>
-        </select>
-      </p>
-  </div>
-
-  <div class="wrapper" ng-controller="MealListCtrl">
-    <aside class="mealsSnippetContainer">
-          <div class="scrollListLabels">
-            <p class="mealsTitle">MEALS</p>
-            <p class="prepTimeTitle">PREP TIME</p>
-          </div><!-- closes scrollListLabels-->
-
-          <div class="mealsScrollList">
-            <ul>
-              <li 
-                ng-click="viewMealDetail(meal); selectThisMeal(meal)"
-                ng-repeat="meal in meals | filter: query | orderBy: orderProp" 
-                ng-class="{selectedMeal:meal.selected}"
-                class="mealPreviewButton" 
-                >
-                <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
-                <a href=""><img ng-src="{{meal.imageUrl}}" class="thumb"></a>
-                <b><a href="" class="mealTitle">{{meal.title}}</a></b>
-                <p class="snippet">{{meal.snippet}}</p>
-              </li>
-            <!--failed white gradient experiment <div class="mealsScrollListGradient">TEST</div>-->
-              <!--closes mealsScrollListGradient-->
-          </div><!-- closes mealsScrollList"-->
-      </aside><!--closes mealsSnippetContainer-->
-
-    <!-- details pane on the right -->
-    <div class="mealDetailsContainer">
-
-      <div class="mealDetailsEmpty" ng-hide="mealDetail">
-        « Select a recipe from the list at left.
-        <img src="./images/site/cbm_logo_large.png">
-      </div><!-- closes mealDetailsEmpty-->
-
-      <div class="mealDetailsContents" ng-show="mealDetail">
-        <h1>{{mealDetail.title}}</h1>
-        <img ng-src="{{mealDetail.images[0]}}" class="meal-hero-img">
-        <p class="prepTimeData">
-            <span id="minsData"> READY IN: <span id="prepDataHighlight">{{mealDetail.preptime + mealDetail.cooktime}} mins</span>
-            ( PREP: {{mealDetail.preptime}} mins
-            | COOK: {{mealDetail.cooktime}} mins ) 
-          </p>
-        
-        <p class="mealDescription">{{mealDetail.description}}</p>
-
-        <span class="tagNames">
-        <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
-        </span>
-
-          <h2>You Will Need</h2>
-            <ul>
-            <li ng-repeat="ingredient in mealDetail.ingredients">
-              {{ingredient.name}}
-            </li>
+<div ng-controller="MealListCtrl">
+    <div class="userSortSettings">
+        <div class="searchbox">
+            <input ng-model="query" class="searchInput" placeholder="Search by ingredient or recipe name"/>
+        </div>
+        <div class="filters">Only show:
+            <ul class="filterNav">
+                <li
+                    ng-repeat="option in mealOptions" class="filterButton">
+                        <p>Thing</p>
+                </li>
             </ul>
-          <h2>Step by Step Instructions</h2>
-          <ol>
-            <li ng-repeat="instruction in mealDetail.instructions">
-              {{instruction.name}}
-            </li>
-          </ol>
-          <h2>Tasty Pics</h2>
-          <span ng-repeat="image in mealDetail.images">
-            <img ng-src="{{image}}" id="mealAdditionalImg">
-          </span>
-        </div><!--closes mealDetailsContents-->
-      </div><!-- closes mealDetailsContainer-->
+        </div>
+    </div>
 
-  </div><!--closes wrapper-->
+    <div class="wrapper">
+        <aside class="mealsSnippetContainer">
+            <div class="scrollListLabels">
+                <p class="mealsTitle">MEALS</p>
+                <p class="prepTimeTitle">PREP TIME</p>
+            </div><!-- closes scrollListLabels-->
+
+            <div class="mealsScrollList">
+                <ul>
+                    <li
+                        ng-click="viewMealDetail(meal); selectThisMeal(meal)"
+                        ng-repeat="meal in meals | filter: query"
+                        ng-class="{selectedMeal:meal.selected}"
+                        class="mealPreviewButton"
+                        >
+                            <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
+                            <a href=""><img ng-src="{{meal.images[0]}}" class="thumb"></a>
+                            <b><a href="" class="mealTitle">{{meal.title}}</a></b>
+                            <p class="snippet">{{meal.snippet}}</p>
+                    </li>
+            </div><!-- closes mealsScrollList"-->
+        </aside><!--closes mealsSnippetContainer-->
+
+        <!-- details pane on the right -->
+        <div class="mealDetailsContainer">
+
+            <div class="mealDetailsEmpty" ng-hide="mealDetail">
+                « Select a recipe from the list at left.
+                <img src="./images/site/cbm_logo_large.png">
+            </div><!-- closes mealDetailsEmpty-->
+
+            <div class="mealDetailsContents" ng-show="mealDetail">
+                <h1>{{mealDetail.title}}</h1>
+                <img ng-src="{{mealDetail.images[0]}}" class="meal-hero-img">
+                <p class="prepTimeData">
+                <span id="minsData"> READY IN: <span id="prepDataHighlight">{{mealDetail.preptime + mealDetail.cooktime}} mins</span>
+                ( PREP: {{mealDetail.preptime}} mins
+                | COOK: {{mealDetail.cooktime}} mins )
+                </p>
+
+                <p class="mealDescription">{{mealDetail.description}}</p>
+
+            <span class="tagNames">
+            <li ng-repeat="tag in mealDetail.tags">{{tag}}</li>
+            </span>
+
+                <h2>You Will Need</h2>
+                <ul>
+                    <li ng-repeat="ingredient in mealDetail.ingredients">
+                        {{ingredient.name}}
+                    </li>
+                </ul>
+                <h2>Step by Step Instructions</h2>
+                <ol>
+                    <li ng-repeat="instruction in mealDetail.instructions">
+                        {{instruction.name}}
+                    </li>
+                </ol>
+                <h2>Tasty Pics</h2>
+              <span ng-repeat="image in mealDetail.images">
+                <img ng-src="{{image}}" id="mealAdditionalImg">
+              </span>
+            </div><!--closes mealDetailsContents-->
+        </div><!-- closes mealDetailsContainer-->
+    </div><!--closes wrapper-->
+</div>
 </div>

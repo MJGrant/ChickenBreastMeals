@@ -29,15 +29,17 @@ h1, h2, h2 {
 }
 
 h1 {
-  font-size:1.5em;
+  font-size:1.3em;
 }
 
 h2, h3 {
-  font-size:1.2em;
+  font-size:1.1em;
 }
 
 header { 
   height:70px;
+  background-color:white;
+  border-bottom:1px #ddd solid;
 }
 
 
@@ -67,6 +69,17 @@ ul, ol {
   justify-content: space-around; 
 }
 
+.userSortSettings {
+    padding:5px;
+    background:white;
+    border-bottom:1px #ddd solid;
+    margin-bottom:14px;
+}
+
+.filterButton{
+    color:red;
+}
+
 .scrollListLabels {
   display: flex; 
   justify-content: space-around;
@@ -75,14 +88,49 @@ ul, ol {
   font-style:italic;
 }
 
+.searchbox {
+    border:1px solid #ddd;
+    border-radius:20px;
+    height:30px;
+    width:380px;
+    background-color:white;
+    position:relative;
+    outline:none;
+    margin-top:5px;
+    margin-left:26px;
+}
+
+.searchInput {
+    background:0 0;
+    border:0 none;
+    width:320px;
+    top:5px;
+    left:40px;
+    position:absolute;
+    outline:none;
+}
+
+
 .sortBy {
   float:left;
   margin:0 auto;
   padding-left:10px;
 }
 
-.userSortSettings {
-  padding-left:3.5em;
+.filters{
+    float:right;
+    border:1px solid red;
+    width:500px;
+    display:block;
+    top:1px;
+}
+
+.filterNav {
+    list-style:none;
+}
+
+.filterNav li {
+    display:inline;
 }
 
 
@@ -112,7 +160,7 @@ ul, ol {
 }
 
 .navMenu > li:nth-child(1) {
-  padding-left:80px;
+  padding-left:50px;
 }
 
 .navMenu > li:after {
@@ -120,7 +168,7 @@ ul, ol {
 }
 
 .navMenu li a:hover {
-  background-color:white;
+  background-color:indianred;
 }
 
 /*********************
@@ -241,12 +289,8 @@ ul, ol {
   margin:5px;
 }
 
-.siteTitle { 
-  text-decoration:none;
-  font-size:1.5em;
-}
-
 .siteTitle img {
+  width:350px;
   float:left;
   display:block;
 }
