@@ -75,7 +75,7 @@
                 <ol>
                     <li ng-repeat="ingredient in mealDetail.ingredients">
                         <input ng-model="mealDetail.ingredients[$index].name">
-                        <a href="" ng-click="mealDetail.ingredients.pop($index)">[X]</a>
+                        <a href="" ng-click="mealDetail.ingredients.pop($index)"><img src="/assets/delete.png"/></a>
                     </li>
 
                     <li>
@@ -88,7 +88,7 @@
                 <ol class="cms-recipeInstructionSteps">
                     <li ng-repeat="instruction in mealDetail.instructions">
                         <textarea ng-model="mealDetail.instructions[$index].name"></textarea>
-                        <a href="" ng-click="mealDetail.instructions.pop($index)">[X]</a>
+                        <a href="" ng-click="mealDetail.instructions.pop($index)"><img src="/assets/bin.png"/></a>
                     </li>
 
                     <li>
@@ -104,7 +104,7 @@
                         <br>
                         <b>Image {{$index + 1}}:</b>
                         <img ng-src="{{image}}" id="mealAdditionalImg">
-                        <a href="" ng-click="mealDetail.images.pop($index)">[X]</a>
+                        <a href="" ng-click="mealDetail.images.pop($index)"><img src="/assets/bin.png"/></a>
                         {{image}}<!-- print the image's filepath-->
                         <br>
                         <!--Change image:
