@@ -173,15 +173,9 @@ ul, ol {
 
 .mealsSnippetContainer {
   height:500px;
-  width:41%;
-  max-width:41%;
-  overflow-y:auto;
+  width:56%;
+  max-width:56%;
   overflow-x:hidden;
-  border-radius:6px;
-  background-color:white;
-    webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-    -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
-    box-shadow: 0 2px 6px rgba(50,50,50,0.50);
 }
 
 .mealsSnippetContainer:hover{
@@ -206,15 +200,7 @@ ul, ol {
 .meals {
   list-style: none;
 }
-
-.mealsScrollListGradient {
-  position:absolute;
-  background-color:red;
-  height:10px;
-  width:100%;
- /* -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));*/
-}
-
+/*
 .mealsScrollList {
   width:100%;
   height:100%;
@@ -228,21 +214,59 @@ ul, ol {
 .mealsScrollList li:last-child {
   margin-bottom:50px;
 }
+*/
+ul.mealGrid {
+    list-style:none;
+}
 
-.mealPreviewButton {
-  width:94%;
-  height:90px;
-  padding:3px;
-  margin:3px 0;
-  font-size:.8em;
-  overflow-y:hidden;
-  border-bottom:3px dotted #f1f1f1;
-  border-radius:4px;
-  background-color:white;
+ul.mealGrid li {
+    display: inline-block;
+    background-color:white;
+    border:1px solid #ddd;
+    vertical-align:top;
+    box-shadow: 0 0 5px #ddd;
+    box-sizing: border-box;
+    width:23.5%;
+    height:200px;
     transition: background-color .5s linear;
-    -moz-transition: background-color .5s linear;  
-    -webkit-transition: background-color .5s linear; 
-    -ms-transition: background-color .5s linear; 
+    -moz-transition: background-color .5s linear;
+    -webkit-transition: background-color .5s linear;
+    -ms-transition: background-color .5s linear;
+    overflow:hidden;
+    margin:.6% .6%;
+    position:relative;
+}
+
+.mealPreviewButton img {
+    max-width:200%;
+    max-height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.prepData {
+    color:white;
+    position:absolute;
+    display:block;
+    right:3px;
+    bottom:3px;
+    text-shadow: 1px 1px #000000;
+}
+
+.mealGridTextArea {
+    font-size:.7em;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height:100px;
+    bottom:0px;
+    display:block;
+    position:absolute;
+    color:white;
+}
+
+.mealGridTextArea h3,p {
+    margin-left:8px;
+    line-height:1em;
 }
 
 .mealPreviewButton:hover {
@@ -256,26 +280,6 @@ ul, ol {
 .snippet { 
   width:91%;
   max-width:91%;
-}
-.selectedMeal {
-  background-color:#f1f1f1;
-}
-
-.selectedMeal .mealTitle {
-  font-style:italic;
-  color:#351414;
-   transition: color .5s linear;
-  -moz-transition: color .5s linear;  
-  -webkit-transition: color .5s linear; 
-  -ms-transition: color .5s linear; 
-}
-.selectedMeal .mealTitle:after {
-    content: " »";
-}
-
-.mealTitle {
-  font-size:1.2em;
-  text-decoration:none;
 }
 
 .thumb {
@@ -291,6 +295,7 @@ ul, ol {
   display:block;
 }
 
+/*
 .cooktime {
   font-size:2em;
   color:gray;
@@ -305,12 +310,16 @@ ul, ol {
   color:#ccc;
 }
 
+*/
+
+/*
+
 .meals li {
   clear: both;
   height: 115px;
   padding-top: 15px;
 }
-
+*/
 /*********************
 /* Meal Details pane (right side)
 /*********************/
@@ -318,18 +327,19 @@ ul, ol {
 .mealDetailsContainer {
   float:right;
   display:block;
-  width:50%;
-  max-width:50%;
+  width:40%;
+  max-width:40%;
   background-color:white;
   height:500px;
   overflow-y:auto;
   overflow-x:hidden;
-  padding:0 20px;
+  padding:0 15px;
   font-size:.8em;
     webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
     -moz-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
     box-shadow: 0 2px 6px rgba(50,50,50,0.50);
   border-radius:6px;
+    margin-right:20px;
 }
 
 .mealDetailsEmpty { 
@@ -379,7 +389,7 @@ ul, ol {
 .meal-hero-img {
   float:right;
   display:block;
-  width:300px;
+  width:240px;
   padding:10px;
   margin-left:20px;
   margin-bottom:10px;

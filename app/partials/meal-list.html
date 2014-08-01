@@ -18,23 +18,32 @@
 
     <div class="wrapper">
         <aside class="mealsSnippetContainer">
+            <!--
             <div class="scrollListLabels">
                 <p class="mealsTitle">MEALS</p>
                 <p class="prepTimeTitle">PREP TIME</p>
             </div><!-- closes scrollListLabels-->
 
             <div class="mealsScrollList">
-                <ul>
+                <ul class="mealGrid">
                     <li
                         ng-click="viewMealDetail(meal); selectThisMeal(meal)"
                         ng-repeat="meal in meals | filter: query"
                         ng-class="{selectedMeal:meal.selected}"
                         class="mealPreviewButton"
                         >
-                            <p class="cooktime">{{meal.cooktime}}<span class="mins">mins</span></p>
-                            <a href=""><img ng-src="{{meal.images[0]}}" class="thumb"></a>
-                            <b><a href="" class="mealTitle">{{meal.title}}</a></b>
-                            <p class="snippet">{{meal.snippet}}</p>
+                            <img ng-src="{{meal.images[0]}}">
+
+                            <div class="mealGridTextArea">
+                                <h3><a href="">{{meal.title}}</a></h3>
+                                <p class="snippet">{{meal.snippet}}</p>
+                            </div>
+
+                            <span class="prepData">
+                                <span class="cookTime">{{meal.cooktime}}</span>
+                                <span class="mins">mins</span>
+                            </span>
+
                     </li>
             </div><!-- closes mealsScrollList"-->
         </aside><!--closes mealsSnippetContainer-->
