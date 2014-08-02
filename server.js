@@ -17,6 +17,7 @@ var db = mongoose.model('Meals', {
 	title:String,
 	snippet:String,
 	description:String,
+    tags:[],
 	preptime:Number,
 	cooktime:Number,
 	oventemp:Number,
@@ -43,6 +44,7 @@ app.route('/api/db/')
 			title:m.title,
 			snippet:m.snippet,
 			description:m.description,
+            tags:m.tags,
 			preptime:m.preptime,
 			cooktime:m.cooktime,
 			oventemp:m.oventemp,
@@ -97,6 +99,7 @@ app.route('/api/db/:meal_id')
 			meal.title = m.title;
 			meal.snippet = m.snippet;
 			meal.description = m.description;
+            meal.tags = m.tags;
 			meal.preptime = m.preptime;
 			meal.cooktime = m.cooktime;
 			meal.oventemp = m.oventemp;

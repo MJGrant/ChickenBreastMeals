@@ -79,6 +79,7 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
                 paleo:false,
                 quick:false
 			};
+            $scope.mealDetail.tags = [];
 			$scope.mealDetail.ingredients = [];
 			$scope.mealDetail.instructions = [];
             $scope.mealDetail.images = [];

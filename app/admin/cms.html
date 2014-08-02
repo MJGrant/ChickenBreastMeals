@@ -44,6 +44,22 @@
                 <a href="" ng-click="mealDetail.description = ''">Clear</a>
                 <br>
 
+                <b>Tags</b>
+                <div class="shortInput">
+                    <ol>
+                        <li ng-repeat="tag in mealDetail.tags">
+                            <input ng-model="mealDetail.tags[$index].name">
+                            <a href="" ng-click="mealDetail.tags.pop($index)"><img src="/assets/delete.png"/></a>
+                        </li>
+                    </ol>
+
+                    <li>
+                        <input ng-model="newTag.name">
+                        <a href="" ng-click="mealDetail.tags.push(newTag); newTag={name:''}">ADD TAG</a>
+                    </li>
+
+                </div>
+
                 <b>Dietary Options</b>
                 <div class="cms-checkboxes">
                     <input type="checkbox" name="mealOptions" value="noGluten" ng-model="mealDetail.mealOptions.glutenfree">Gluten free<br>
