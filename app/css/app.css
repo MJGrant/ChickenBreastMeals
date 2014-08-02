@@ -173,9 +173,11 @@ ul, ol {
 
 .mealsSnippetContainer {
   height:500px;
-  width:56%;
-  max-width:56%;
+  width:55.5%;
+  max-width:55.5%;
   overflow-x:hidden;
+    margin-left:20px;
+    margin-right:10px;
 }
 
 .mealsSnippetContainer:hover{
@@ -200,21 +202,7 @@ ul, ol {
 .meals {
   list-style: none;
 }
-/*
-.mealsScrollList {
-  width:100%;
-  height:100%;
-  padding-left:10px;
-}
 
-.mealsScrollList li {
-    list-style: none;
-}
-
-.mealsScrollList li:last-child {
-  margin-bottom:50px;
-}
-*/
 ul.mealGrid {
     list-style:none;
 }
@@ -235,6 +223,7 @@ ul.mealGrid li {
     overflow:hidden;
     margin:.6% .6%;
     position:relative;
+    cursor:pointer;
 }
 
 .mealPreviewButton img {
@@ -249,7 +238,7 @@ ul.mealGrid li {
     position:absolute;
     display:block;
     right:3px;
-    bottom:3px;
+    bottom:80px; /*must match height in mealGridTextArea*/
     text-shadow: 1px 1px #000000;
 }
 
@@ -257,7 +246,7 @@ ul.mealGrid li {
     font-size:.7em;
     width:100%;
     background-color: rgba(0, 0, 0, 0.7);
-    height:100px;
+    height:80px;
     bottom:0px;
     display:block;
     position:absolute;
@@ -266,6 +255,7 @@ ul.mealGrid li {
 
 .mealGridTextArea h3,p {
     margin-left:8px;
+    margin-right:3px;
     line-height:1em;
 }
 
@@ -277,6 +267,18 @@ ul.mealGrid li {
   -ms-transition: background-color .2s linear;
 }
 
+.selectedMeal .mealTitle {
+    font-style:italic;
+    color:#351414;
+    transition:color .5s linear;
+    -moz-transition: color .5s linear;
+    -webkit-transition: color .5s linear;
+    -ms-transition: color .5s linear;
+}
+
+.selectedMeal .mealTitle:after {
+    content: " »";
+}
 .snippet { 
   width:91%;
   max-width:91%;
@@ -295,31 +297,6 @@ ul.mealGrid li {
   display:block;
 }
 
-/*
-.cooktime {
-  font-size:2em;
-  color:gray;
-  float:right;
-  padding-right:6px;
-}
-
-.mins {
-  font-size:.6em;
-  clear:both;
-  display:block;
-  color:#ccc;
-}
-
-*/
-
-/*
-
-.meals li {
-  clear: both;
-  height: 115px;
-  padding-top: 15px;
-}
-*/
 /*********************
 /* Meal Details pane (right side)
 /*********************/
@@ -357,6 +334,8 @@ ul.mealGrid li {
 .mealDescription{
   font-style:italic;
   padding:0 50px 0 0;
+  line-height:1.5em;
+    color:#444;
 }
 
 .mealIngredientsList li {
@@ -389,7 +368,7 @@ ul.mealGrid li {
 .meal-hero-img {
   float:right;
   display:block;
-  width:240px;
+  width:310px;
   padding:10px;
   margin-left:20px;
   margin-bottom:10px;
@@ -400,6 +379,7 @@ ul.mealGrid li {
 
 .prepTimeData {
   color:#ccc;
+    line-height:1.3em;
 }
 
 #minsData {

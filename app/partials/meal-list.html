@@ -4,10 +4,8 @@
         <div class="filters">
             <ul class="filterNav">
                 Show only:
-                <li>
-                    <!-- ng-repeat="option in mealOptions" class="filterButton">-->
-                   Gluten Free
-                </li>
+                <li ng-click="filterByOption.glutenfree = !filterByOption.glutenfree">Gluten Free</li>
+                <!--toggle between true and null -->
                 <li>Low Carb</li>
                 <li>Low Fat</li>
                 <li>Paleo</li>
@@ -57,12 +55,14 @@
             </div><!-- closes mealDetailsEmpty-->
 
             <div class="mealDetailsContents" ng-show="mealDetail">
-                <h1>{{mealDetail.title}}</h1>
                 <img ng-src="{{mealDetail.images[0]}}" class="meal-hero-img">
+                <h1>{{mealDetail.title}}</h1>
+
                 <p class="prepTimeData">
-                <span id="minsData"> READY IN: <span id="prepDataHighlight">{{mealDetail.preptime + mealDetail.cooktime}} mins</span>
-                ( PREP: {{mealDetail.preptime}} mins
-                | COOK: {{mealDetail.cooktime}} mins )
+                <span id="minsData"> READY IN: <span id="prepDataHighlight"><b>{{mealDetail.preptime + mealDetail.cooktime}} mins</b></span>
+                    <br>
+                    PREP: {{mealDetail.preptime}} mins<br>
+                    COOK: {{mealDetail.cooktime}} mins
                 </p>
 
                 <p class="mealDescription">{{mealDetail.description}}</p>

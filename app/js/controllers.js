@@ -118,6 +118,37 @@ cbmAppControllers.controller('AdminCtrl', ['$scope', function($scope) {
 }]);
 
 cbmAppControllers.controller('MealListCtrl', ['$scope', '$http', function($scope, $http) {
+    /*$scope.filterByOption = {
+        glutenfree:undefined
+        }; */
+
+
+    $scope.filterMeals = function(query, filterByOption) {
+       console.log("Showing meals that meet this criteria: " + query + "or" + filterByOption);
+        return function(meal) {
+            if (meal.title.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+                return true;
+            } else if (!filterByOption.glutenfree) {
+                return true;
+            } else if (filterByOption.glutenfree && meal.mealOptions.glutenfree) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+    };
+
+        /*
+    $scope.toggleOption = function(toggleMe) {
+        if (toggleMe) {
+            toggleMe = undefined;
+        } else {
+            toggleMe = true;
+        }
+        return toggleMe;
+    };
+*/
+
 	$scope.getMeals();
 	$scope.viewMealDetail = function(meal) {
 		console.log("Viewing meal detail");

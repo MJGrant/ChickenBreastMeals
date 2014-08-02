@@ -9,8 +9,8 @@
         <div class="cms-recipeTitleList">
             <ul>
                 <li
-                        ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
-                        ng-class="{selectedMeal:meals[$index].selected}">
+                    ng-repeat="meal in meals | filter: query | orderBy: alphabetical"
+                    ng-class="{selectedMeal:meals[$index].selected}">
                     <a href="" ng-click="viewMealDetail(meal); selectThisMeal(meal)">{{meal.title}}</a>
                     <a href="" ng-click="deleteMeal(meal._id)">&nbsp&nbsp[Delete]</a>
                 </li>
@@ -121,7 +121,7 @@
                         <br>
                     </li>
                 </ol>
-
+                <br><br><br><br><br><br><br><br>
             </div>
         </div>
     </div><!--closes cms-wrapper-->
