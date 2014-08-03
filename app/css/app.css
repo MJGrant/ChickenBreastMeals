@@ -480,3 +480,8 @@ CMS
   float:right;
   background-color:white;
 }
+
+.toolImg {
+    height:300px;
+    float:right;
+}
