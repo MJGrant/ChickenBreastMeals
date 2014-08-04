@@ -67,8 +67,9 @@
 
                 <p class="mealDescription">{{mealDetail.description}}</p>
 
+            <h2>Tags</h2>
             <span class="tagNames">
-                <li ng-repeat="tag in mealDetail.tags">{{tag.name}}</li>
+                <li class="tag" ng-repeat="tag in mealDetail.tags">{{tag.name}}</li>
             </span>
 
             <h2>{{mealDetail.ingredients.length}} Ingredients</h2>
