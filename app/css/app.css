@@ -189,16 +189,6 @@ ul, ol {
   font-style:italic;
 }
 
-.mealsTitle {
-  padding-left:10px;
-  float:left;
-}
-
-.prepTimeTitle {
-  padding-right:10px;
-  float:right;
-}
-
 .meals {
   list-style: none;
 }
@@ -226,11 +216,19 @@ ul.mealGrid li {
     cursor:pointer;
 }
 
+ul.mealGrid li:hover {
+    webkit-box-shadow: 0 2px 6px rgba(50,50,50,0.50);
+}
+
 .mealPreviewButton img {
     max-width:200%;
     max-height:100%;
     position:relative;
     overflow:hidden;
+}
+
+.mealPreviewButton img:hover {
+    opacity: 0.75;
 }
 
 .prepData {
@@ -259,17 +257,19 @@ ul.mealGrid li {
     line-height:1em;
 }
 
+/*
 .mealPreviewButton:hover {
   background-color:#f1f1f1;
   transition: background-color .2s linear;
   -moz-transition: background-color .2s linear;  
   -webkit-transition: background-color .2s linear; 
   -ms-transition: background-color .2s linear;
-}
+    box-shadow: 0 0 5px #ddd;
+}*/
 
 .selectedMeal .mealTitle {
     font-style:italic;
-    color:#351414;
+    color:#f1bd4d;
     transition:color .5s linear;
     -moz-transition: color .5s linear;
     -webkit-transition: color .5s linear;
